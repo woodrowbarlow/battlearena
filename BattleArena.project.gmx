@@ -63,6 +63,7 @@
     <sprites name="decorations">
       <sprites name="plants">
         <sprite>sprites\spr_deco_plants_flower1</sprite>
+        <sprite>sprites\spr_deco_plants_flower2</sprite>
         <sprite>sprites\spr_deco_plants_mushroom1</sprite>
         <sprite>sprites\spr_deco_plants_mushroom2</sprite>
         <sprite>sprites\spr_deco_plants_shrub1</sprite>
@@ -89,7 +90,13 @@
       </sprites>
     </sprites>
     <sprites name="characters">
-      <sprite>sprites\spr_characters_demo</sprite>
+      <sprites name="sallie">
+        <sprite>sprites\spr_characters_sallie_idle</sprite>
+        <sprite>sprites\spr_characters_sallie_walk</sprite>
+        <sprite>sprites\spr_characters_sallie_run</sprite>
+        <sprite>sprites\spr_characters_sallie_jump</sprite>
+        <sprite>sprites\spr_characters_sallie_longjump</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -102,7 +109,7 @@
   </fonts>
   <objects name="objects">
     <objects name="characters">
-      <object>objects\obj_characters_demo</object>
+      <object>objects\obj_characters_sallie</object>
     </objects>
     <objects name="platforms">
       <objects name="foreground">
@@ -161,6 +168,7 @@
     <objects name="decorations">
       <objects name="plants">
         <object>objects\obj_deco_plants_flower1</object>
+        <object>objects\obj_deco_plants_flower2</object>
         <object>objects\obj_deco_plants_mushroom1</object>
         <object>objects\obj_deco_plants_mushroom2</object>
         <object>objects\obj_deco_plants_shrub1</object>

@@ -13,14 +13,17 @@ To see how to download the project, see `DEVELOPING.md`.
 
 This game requires at least one XBox360 controller plugged into your PC. If you only have one plugged in, then player one uses the keyboard and player two uses the controller. If you have two plugged in, than player one can use either the keyboard or controller one, and player two uses controller two.
 
- * **Move**:
+ * **Move**
     * Controller: Joystick or Directional Pad
-    * Keyboard: WASD or Arrow Keys
- * **Melee Attack**:
+    * Keyboard: WASD or Arrow keys
+ * **Jump**
+    * Controller: A button
+	* Keyboard: W key or Up Arrow key
+ * **Melee Attack**
     * Controller: B button or Left Trigger
     * Keyboard: Shift Key
- * **Weapon Attack**:
-    * Controller: A button or Right Trigger
+ * **Weapon Attack**
+    * Controller: Y button or Right Trigger
     * Keyboard: Spacebar
  * **Special Attack**:
     * Controller: X button or Y button
