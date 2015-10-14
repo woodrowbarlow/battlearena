@@ -33,6 +33,32 @@
           <sprite>sprites\spr_plat_fg_grass_tiny</sprite>
         </sprites>
       </sprites>
+      <sprites name="background">
+        <sprites name="grass">
+          <sprite>sprites\spr_plat_bg_grass_top_lcap_far</sprite>
+          <sprite>sprites\spr_plat_bg_grass_top_lcap_outer</sprite>
+          <sprite>sprites\spr_plat_bg_grass_top_lcap_inner</sprite>
+          <sprite>sprites\spr_plat_bg_grass_top_rcap_far</sprite>
+          <sprite>sprites\spr_plat_bg_grass_top_rcap_outer</sprite>
+          <sprite>sprites\spr_plat_bg_grass_top_rcap_inner</sprite>
+          <sprite>sprites\spr_plat_bg_grass_top_ledge</sprite>
+          <sprite>sprites\spr_plat_bg_grass_top_redge</sprite>
+          <sprite>sprites\spr_plat_bg_grass_top_mid</sprite>
+          <sprite>sprites\spr_plat_bg_grass_top_mid_short</sprite>
+          <sprite>sprites\spr_plat_bg_grass_mid_ledge</sprite>
+          <sprite>sprites\spr_plat_bg_grass_mid_redge</sprite>
+          <sprite>sprites\spr_plat_bg_grass_mid_mid</sprite>
+          <sprite>sprites\spr_plat_bg_grass_bot_lcap_outer</sprite>
+          <sprite>sprites\spr_plat_bg_grass_bot_lcap_inner</sprite>
+          <sprite>sprites\spr_plat_bg_grass_bot_rcap_outer</sprite>
+          <sprite>sprites\spr_plat_bg_grass_bot_rcap_inner</sprite>
+          <sprite>sprites\spr_plat_bg_grass_bot_mid</sprite>
+          <sprite>sprites\spr_plat_bg_grass_narrow_top</sprite>
+          <sprite>sprites\spr_plat_bg_grass_narrow_mid</sprite>
+          <sprite>sprites\spr_plat_bg_grass_narrow_bot</sprite>
+          <sprite>sprites\spr_plat_bg_grass_tiny</sprite>
+        </sprites>
+      </sprites>
     </sprites>
     <sprites name="decorations">
       <sprites name="plants">
@@ -85,6 +111,32 @@
           <object>objects\obj_plat_fg_grass_tiny</object>
         </objects>
       </objects>
+      <objects name="background">
+        <objects name="grass">
+          <object>objects\obj_plat_bg_grass_top_lcap_far</object>
+          <object>objects\obj_plat_bg_grass_top_lcap_outer</object>
+          <object>objects\obj_plat_bg_grass_top_lcap_inner</object>
+          <object>objects\obj_plat_bg_grass_top_rcap_far</object>
+          <object>objects\obj_plat_bg_grass_top_rcap_outer</object>
+          <object>objects\obj_plat_bg_grass_top_rcap_inner</object>
+          <object>objects\obj_plat_bg_grass_top_ledge</object>
+          <object>objects\obj_plat_bg_grass_top_redge</object>
+          <object>objects\obj_plat_bg_grass_top_mid</object>
+          <object>objects\obj_plat_bg_grass_top_mid_short</object>
+          <object>objects\obj_plat_bg_grass_mid_ledge</object>
+          <object>objects\obj_plat_bg_grass_mid_redge</object>
+          <object>objects\obj_plat_bg_grass_mid_mid</object>
+          <object>objects\obj_plat_bg_grass_bot_lcap_outer</object>
+          <object>objects\obj_plat_bg_grass_bot_lcap_inner</object>
+          <object>objects\obj_plat_bg_grass_bot_rcap_outer</object>
+          <object>objects\obj_plat_bg_grass_bot_rcap_inner</object>
+          <object>objects\obj_plat_bg_grass_bot_mid</object>
+          <object>objects\obj_plat_bg_grass_narrow_top</object>
+          <object>objects\obj_plat_bg_grass_narrow_mid</object>
+          <object>objects\obj_plat_bg_grass_narrow_bot</object>
+          <object>objects\obj_plat_bg_grass_tiny</object>
+        </objects>
+      </objects>
     </objects>
     <objects name="decorations">
       <objects name="plants">
@@ -110,8 +162,8 @@
     <rooms name="alerts">
       <room>rooms\rm_alerts_missingcontroller</room>
     </rooms>
-    <rooms name="levels">
-      <room>rooms\rm_levels_demo</room>
+    <rooms name="arenas">
+      <room>rooms\rm_arenas_demo</room>
     </rooms>
   </rooms>
   <help>
