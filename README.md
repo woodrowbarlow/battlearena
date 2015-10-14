@@ -47,6 +47,7 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
     * Animations: idle, walk, run, standing jump, running jump, climb ladder, basic melee, dazed, divebomb.
     * Tapping jump while in midair gives an additional half-height jump. This can be done up to three times before Aerie needs to land.
     * Tapping special while in midair causes Aerie to dive at a forty-five degree descension. Diving into another character in this manner causes 200% of the standard melee damage.
+ * One more character TBD!
 
 ## Weapons
 
@@ -69,6 +70,7 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
     * Knockback per Strike: 1.5 meters
     * Cooldown Time: 2 seconds
     * Starting Ammunition: none
+ * More weapons TBD!
 
 ## Items
 
@@ -78,5 +80,8 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
     * Respawn Time: 10 seconds
  * **Missile Launcher Ammunition Pack** provides 3 additional missiles.
     * Respawn Time: 45 seconds
+ * More items TBD!
 
 ## Arenas
+
+ * Four arenas TBD!
