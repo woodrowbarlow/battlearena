@@ -50,9 +50,8 @@ character_health = 100;
           <argument>
             <kind>1</kind>
             <string>var move_horiz = scr_pressed_right(player_id, true) - scr_pressed_left(player_id, true);
-var move_vert = scr_pressed_down(player_id, true) - scr_pressed_up(player_id, true);
+
 x += 5 * move_horiz;
-y += 5 * move_vert;
 </string>
           </argument>
         </arguments>

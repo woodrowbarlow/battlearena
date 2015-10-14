@@ -208,7 +208,7 @@
       <room>rooms\rm_menus_characterselect</room>
     </rooms>
     <rooms name="arenas">
-      <room>rooms\rm_arenas_demo</room>
+      <room>rooms\rm_arenas_knoll</room>
     </rooms>
   </rooms>
   <help>

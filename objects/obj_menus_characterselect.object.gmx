@@ -29,7 +29,7 @@
 number_of_players = 2;
 selected_characters[0] = obj_characters_sallie;
 selected_characters[1] = obj_characters_sallie;
-room_goto(rm_arenas_demo);
+room_goto(rm_arenas_knoll);
 </string>
           </argument>
         </arguments>
