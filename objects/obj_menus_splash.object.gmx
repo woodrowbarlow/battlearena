@@ -33,7 +33,8 @@ for(i = 0; i &lt; slots; i++) {
     if(gamepad_is_connected(i)) controller_count ++;
 }
 if(controller_count &lt; 1) {
-    room_goto(rm_alerts_missingcontroller);
+    show_message("You must have at least one controller plugged in to play Battle Arena.");
+    game_end();
 }
 </string>
           </argument>

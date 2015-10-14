@@ -207,9 +207,6 @@
       <room>rooms\rm_menus_options</room>
       <room>rooms\rm_menus_characterselect</room>
     </rooms>
-    <rooms name="alerts">
-      <room>rooms\rm_alerts_missingcontroller</room>
-    </rooms>
     <rooms name="arenas">
       <room>rooms\rm_arenas_demo</room>
     </rooms>

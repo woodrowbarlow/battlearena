@@ -17,7 +17,7 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
     * Controller: Joystick or Directional Pad
     * Keyboard: WASD or Arrow keys
  * **Jump**
-    * Controller: A button
+    * Controller: A button or Up on the Directional Pad
 	* Keyboard: W key or Up Arrow key
  * **Melee Attack**
     * Controller: B button or Left Trigger
