@@ -50,7 +50,10 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
     * Animations: idle, walk, run, standing jump, running jump, climb ladder, basic melee, dazed, divebomb.
     * Tapping jump while in midair gives an additional half-height jump. This can be done up to three times before Aerie needs to land.
     * Tapping special while in midair causes Aerie to dive at a forty-five degree descension. Diving into another character in this manner causes 200% of the standard melee damage.
- * One more character TBD!
+ * **Penn** the gruff, militarian penguin. He is weak up close, but has great ranged abilities. He uses ranged weapons better, but has a lackluster melee range. Can throw an ice bomb that can freeze enemies.
+    * Stats: Ranged weapon attacks have lower cooldown (or ammo cost), weak melee attacks, 10 second special cooldown
+    * Animations: idle, wal, run, standing jump, running jump, climb ladder, basic melee, dazed, throwing bomb
+    * Holding special will bring out the ice grenade, which will travel in the direction according to the direction of joystick upon release of special
 
 ## Weapons
 
@@ -58,6 +61,11 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
     * Damage per Strike: 8 HP
     * Knockback per Strike: 0.2 meters
     * Cooldown Time: 0.75 seconds
+    * Starting Ammunition: Unlimited
+ * **Dave's Broom** has a longer range than the standard melee, but slightly slower cooldown
+    * Damage per Strike: 10 HP
+    * Knockback per Strike: 0.4 meters
+    * Cooldown Time: .85 seconds
     * Starting Ammunition: Unlimited
  * **Basic Rifle** shoots small balls of energy horizontally.
     * Damage per Strike: 3 HP
@@ -73,7 +81,11 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
     * Knockback per Strike: 1.5 meters
     * Cooldown Time: 2 seconds
     * Starting Ammunition: none
- * More weapons TBD!
+ * **Shotgun** shoots a set of shots at once, less accurate at long range
+    * Damage per Strike: 25 HP (5 Pellets at 5 Damage Each)
+    * Knockback per Strike: 1 Meter
+    * Cooldown Time: 1 seconds
+    * Starting Ammunition: 10
 
 ## Items
 
@@ -90,4 +102,4 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
  * **The Knoll** is a grassy platformer arena. There are happy flowers that dance in the background, fluffy clouds drift by, and there are cute bubbles in the water. This is the most basic level.
  * **The Station** is a mining base on the moon. There are machines trundling back and forth in the background while computer screens run simulations above you. Gravity here is lower than normal.
  * **The Ruins** is the site of an ancient temple that has since crumbled.
- * One more arena TBD!
+ * **The Berg** A precarious, icy mountain with slipperly slopes.
