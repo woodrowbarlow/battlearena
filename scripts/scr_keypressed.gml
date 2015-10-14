@@ -47,32 +47,104 @@ else {
 }
 
 #define scr_pressed_up
-var keys, buttons;
+var keys, buttons, ret, i;
 keys[0] = vk_up;
 keys[1] = ord("W");
 buttons[0] = gp_padu;
-return scr_keypressed(argument0, keys, buttons, argument1);
+ret = scr_keypressed(argument0, keys, buttons, argument1);
+if(ret > 0) return ret;
+
+// the above code doesn't handle joysticks
+if(argument0 < 0) {
+    for(i = 0; i < controller_count; i++) {
+        ret = scr_pressed_up(i, argument1);
+        if(ret > 0) return ret;
+    }
+    return 0;
+}
+else {
+    if(controller_count == 1 && argument0 == 0) return 0;
+    else if(controller_count == 1 && argument0 == 1) i = 0;
+    else i = argument0;
+    ret = gamepad_axis_value(i, gp_axislv);
+    if(ret < -0.2) return -ret;
+    else return 0;
+}
 
 #define scr_pressed_down
 var keys, buttons;
 keys[0] = vk_down;
 keys[1] = ord("S");
 buttons[0] = gp_padd;
-return scr_keypressed(argument0, keys, buttons, argument1);
+ret = scr_keypressed(argument0, keys, buttons, argument1);
+if(ret > 0) return ret;
+
+// the above code doesn't handle joysticks
+if(argument0 < 0) {
+    for(i = 0; i < controller_count; i++) {
+        ret = scr_pressed_down(i, argument1);
+        if(ret > 0) return ret;
+    }
+    return 0;
+}
+else {
+    if(controller_count == 1 && argument0 == 0) return 0;
+    else if(controller_count == 1 && argument0 == 1) i = 0;
+    else i = argument0;
+    ret = gamepad_axis_value(i, gp_axislv);
+    if(ret > 0.2) return ret;
+    else return 0;
+}
 
 #define scr_pressed_left
 var keys, buttons;
 keys[0] = vk_left;
 keys[1] = ord("A");
 buttons[0] = gp_padl;
-return scr_keypressed(argument0, keys, buttons, argument1);
+ret = scr_keypressed(argument0, keys, buttons, argument1);
+if(ret > 0) return ret;
+
+// the above code doesn't handle joysticks
+if(argument0 < 0) {
+    for(i = 0; i < controller_count; i++) {
+        ret = scr_pressed_left(i, argument1);
+        if(ret > 0) return ret;
+    }
+    return 0;
+}
+else {
+    if(controller_count == 1 && argument0 == 0) return 0;
+    else if(controller_count == 1 && argument0 == 1) i = 0;
+    else i = argument0;
+    ret = gamepad_axis_value(i, gp_axislh);
+    if(ret < -0.2) return -ret;
+    else return 0;
+}
 
 #define scr_pressed_right
 var keys, buttons;
 keys[0] = vk_right;
 keys[1] = ord("D");
 buttons[0] = gp_padr;
-return scr_keypressed(argument0, keys, buttons, argument1);
+ret = scr_keypressed(argument0, keys, buttons, argument1);
+if(ret > 0) return ret;
+
+// the above code doesn't handle joysticks
+if(argument0 < 0) {
+    for(i = 0; i < controller_count; i++) {
+        ret = scr_pressed_right(i, argument1);
+        if(ret > 0) return ret;
+    }
+    return 0;
+}
+else {
+    if(controller_count == 1 && argument0 == 0) return 0;
+    else if(controller_count == 1 && argument0 == 1) i = 0;
+    else i = argument0;
+    ret = gamepad_axis_value(i, gp_axislh);
+    if(ret > 0.2) return ret;
+    else return 0;
+}
 
 #define scr_pressed_primary
 var keys, buttons;
