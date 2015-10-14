@@ -63,9 +63,29 @@
     <sprites name="decorations">
       <sprites name="plants">
         <sprite>sprites\spr_deco_plants_flower1</sprite>
+        <sprite>sprites\spr_deco_plants_mushroom1</sprite>
+        <sprite>sprites\spr_deco_plants_mushroom2</sprite>
+        <sprite>sprites\spr_deco_plants_shrub1</sprite>
+        <sprite>sprites\spr_deco_plants_shrub2</sprite>
+        <sprite>sprites\spr_deco_plants_tree1</sprite>
+        <sprite>sprites\spr_deco_plants_tree2</sprite>
       </sprites>
       <sprites name="sky">
         <sprite>sprites\spr_deco_sky_cloud1</sprite>
+      </sprites>
+      <sprites name="water">
+        <sprite>sprites\spr_deco_water_waves</sprite>
+        <sprite>sprites\spr_deco_water</sprite>
+      </sprites>
+      <sprites name="elements">
+        <sprite>sprites\spr_deco_elem_ladder</sprite>
+        <sprite>sprites\spr_deco_elem_bridge_lcap</sprite>
+        <sprite>sprites\spr_deco_elem_bridge_rcap</sprite>
+        <sprite>sprites\spr_deco_elem_bridge_lslope_outer</sprite>
+        <sprite>sprites\spr_deco_elem_bridge_lslope_inner</sprite>
+        <sprite>sprites\spr_deco_elem_bridge_rslope_outer</sprite>
+        <sprite>sprites\spr_deco_elem_bridge_rslope_inner</sprite>
+        <sprite>sprites\spr_deco_elem_bridge_mid</sprite>
       </sprites>
     </sprites>
     <sprites name="characters">
@@ -141,9 +161,29 @@
     <objects name="decorations">
       <objects name="plants">
         <object>objects\obj_deco_plants_flower1</object>
+        <object>objects\obj_deco_plants_mushroom1</object>
+        <object>objects\obj_deco_plants_mushroom2</object>
+        <object>objects\obj_deco_plants_shrub1</object>
+        <object>objects\obj_deco_plants_shrub2</object>
+        <object>objects\obj_deco_plants_tree1</object>
+        <object>objects\obj_deco_plants_tree2</object>
       </objects>
       <objects name="sky">
         <object>objects\obj_deco_sky_cloud1</object>
+      </objects>
+      <objects name="water">
+        <object>objects\obj_deco_water_waves</object>
+        <object>objects\obj_deco_water</object>
+      </objects>
+      <objects name="elements">
+        <object>objects\obj_deco_elem_ladder</object>
+        <object>objects\obj_deco_elem_bridge_lcap</object>
+        <object>objects\obj_deco_elem_bridge_rcap</object>
+        <object>objects\obj_deco_elem_bridge_lslope_outer</object>
+        <object>objects\obj_deco_elem_bridge_lslope_inner</object>
+        <object>objects\obj_deco_elem_bridge_rslope_outer</object>
+        <object>objects\obj_deco_elem_bridge_rslope_inner</object>
+        <object>objects\obj_deco_elem_bridge_mid</object>
       </objects>
     </objects>
     <objects name="menus">

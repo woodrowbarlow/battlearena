@@ -6,7 +6,7 @@
   <vsnap>32</vsnap>
   <hsnap>32</hsnap>
   <isometric>0</isometric>
-  <speed>60</speed>
+  <speed>30</speed>
   <persistent>0</persistent>
   <colour>16757845</colour>
   <showcolour>-1</showcolour>
@@ -137,7 +137,6 @@ for(i = 0; i &lt; number_of_players; i++) {
     <instance objName="obj_deco_sky_cloud1" x="-32" y="192" name="inst_D1D962EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_sky_cloud1" x="320" y="160" name="inst_614F36A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_sky_cloud1" x="448" y="-32" name="inst_18E9578D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_plat_bg_grass_top_ledge" x="0" y="352" name="inst_CC12CE46" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_top_redge" x="32" y="352" name="inst_536F3734" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_mid_ledge" x="352" y="320" name="inst_AFC4ADD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_mid_ledge" x="352" y="288" name="inst_33677FC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -175,6 +174,92 @@ for(i = 0; i &lt; number_of_players; i++) {
     <instance objName="obj_plat_bg_grass_top_mid" x="576" y="224" name="inst_A0D936C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_top_mid" x="608" y="224" name="inst_72F9D4C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_mid_mid" x="608" y="256" name="inst_2F486870" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_mid" x="-32" y="384" name="inst_DCDB7395" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_mid" x="-64" y="384" name="inst_7EDCF337" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_mid" x="-96" y="384" name="inst_D0A0AFF1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_ledge" x="-128" y="384" name="inst_F5534211" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_bg_grass_top_mid" x="0" y="352" name="inst_C2685386" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_bg_grass_top_mid" x="-32" y="352" name="inst_3F28F0A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_bg_grass_top_mid" x="-64" y="352" name="inst_EBB1E4EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_bg_grass_top_ledge" x="-96" y="352" name="inst_A626FCBE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_rcap_inner" x="640" y="224" name="inst_E6802FD3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_rcap_outer" x="672" y="224" name="inst_9B351254" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_mid" x="640" y="384" name="inst_9455552F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_mid" x="672" y="384" name="inst_880F3499" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_mid" x="704" y="384" name="inst_D82D8531" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_redge" x="736" y="384" name="inst_D8C1E423" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_rcap_outer" x="640" y="64" name="inst_25F0F5C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water_waves" x="96" y="416" name="inst_B45C6D8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water_waves" x="128" y="416" name="inst_71195CE5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water_waves" x="160" y="416" name="inst_4D5B4ED1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water_waves" x="192" y="416" name="inst_0D4D914D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water_waves" x="224" y="416" name="inst_574B6BC8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water_waves" x="256" y="416" name="inst_1A3AFB40" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water_waves" x="288" y="416" name="inst_EFBE5907" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water_waves" x="320" y="416" name="inst_88007B67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water_waves" x="448" y="416" name="inst_E944FBBC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water_waves" x="480" y="416" name="inst_E5125877" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water" x="64" y="448" name="inst_15F3469E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water" x="96" y="448" name="inst_553EE8C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water" x="128" y="448" name="inst_8BD844A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water" x="160" y="448" name="inst_B7DE570E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water" x="192" y="448" name="inst_6430FAE1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water" x="224" y="448" name="inst_C4656488" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water" x="256" y="448" name="inst_CCDA31F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water" x="288" y="448" name="inst_B773684F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water" x="320" y="448" name="inst_79D6842D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water" x="448" y="448" name="inst_59230EAE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_water" x="480" y="448" name="inst_113DFC2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_ladder" x="384" y="224" name="inst_38A44E94" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_ladder" x="384" y="192" name="inst_FB9C2A86" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_ladder" x="384" y="160" name="inst_B78A2D9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_ladder" x="384" y="128" name="inst_322A9A7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_ladder" x="384" y="96" name="inst_7D401787" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_ladder" x="384" y="64" name="inst_BC4C6CFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_lcap" x="448" y="32" name="inst_7184A225" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_rcap" x="608" y="32" name="inst_23A40443" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_lslope_inner" x="480" y="32" name="inst_B4E119E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_rslope_inner" x="576" y="32" name="inst_8CE26B99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_mid" x="512" y="32" name="inst_B210962B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_mid" x="544" y="32" name="inst_44341D5E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_rcap" x="160" y="32" name="inst_9D7CDBCE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_rslope_outer" x="128" y="32" name="inst_7E5765A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_rslope_inner" x="96" y="64" name="inst_2AD8CFE2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_mid" x="64" y="64" name="inst_8CFB770A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_mid" x="32" y="64" name="inst_8692ACE4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_lslope_inner" x="0" y="64" name="inst_8FE74BB8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_bridge_lslope_outer" x="-32" y="32" name="inst_69D2E396" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_tiny" x="-64" y="64" name="inst_CFA1DAA6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_shrub2" x="0" y="320" name="inst_9B1217A1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_shrub2" x="224" y="32" name="inst_495C0612" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_shrub2" x="416" y="32" name="inst_019CC49D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_shrub1" x="32" y="320" name="inst_423C0C96" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_shrub1" x="192" y="32" name="inst_4B976E6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_shrub1" x="256" y="32" name="inst_B98375D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_shrub1" x="608" y="192" name="inst_DCBE800F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_tree1" x="608" y="320" name="inst_9EF26B99" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_tree1" x="512" y="128" name="inst_EEC4840E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_tree1" x="320" y="0" name="inst_56327B68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_tree2" x="96" y="288" name="inst_8035FD2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_tree1" x="160" y="160" name="inst_CB91C68F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_shrub1" x="192" y="192" name="inst_8E277505" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_flower1" x="64" y="352" name="inst_7CD34D43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_flower1" x="576" y="352" name="inst_8AAC1C80" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_flower1" x="576" y="192" name="inst_B1BBC3D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_flower1" x="288" y="32" name="inst_C9DB20C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_mushroom1" x="320" y="320" name="inst_89EEBDAC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_mushroom1" x="352" y="224" name="inst_1A9C25E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_mushroom1" x="416" y="288" name="inst_83E690F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_mushroom1" x="544" y="352" name="inst_EDF42BA4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_mushroom2" x="384" y="320" name="inst_713EF7D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_plants_mushroom2" x="512" y="352" name="inst_88776BD8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_lcap_far" x="128" y="64" name="inst_D486359B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_lcap_far" x="576" y="64" name="inst_5CE5176C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_lcap_far" x="544" y="224" name="inst_30665B90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_lcap_far" x="384" y="64" name="inst_B1CC27B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_rcap_far" x="480" y="64" name="inst_8154023F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_rcap_far" x="384" y="64" name="inst_60BA0B67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_bg_grass_top_lcap_far" x="384" y="320" name="inst_4E9B83FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
