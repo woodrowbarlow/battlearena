@@ -67,7 +67,7 @@ else {
     else if(controller_count == 1 && argument0 == 1) i = 0;
     else i = argument0;
     ret = gamepad_axis_value(i, gp_axislv);
-    if(ret < -0.2) return (-ret) + 0.2;
+    if(ret < -0.2) return -ret;
     else return 0;
 }
 
@@ -92,7 +92,7 @@ else {
     else if(controller_count == 1 && argument0 == 1) i = 0;
     else i = argument0;
     ret = gamepad_axis_value(i, gp_axislv);
-    if(ret > 0.2) return ret + 0.2;
+    if(ret > 0.2) return ret;
     else return 0;
 }
 
@@ -117,7 +117,7 @@ else {
     else if(controller_count == 1 && argument0 == 1) i = 0;
     else i = argument0;
     ret = gamepad_axis_value(i, gp_axislh);
-    if(ret < -0.2) return (-ret) + 0.2;
+    if(ret < -0.2) return -ret;
     else return 0;
 }
 
@@ -142,7 +142,7 @@ else {
     else if(controller_count == 1 && argument0 == 1) i = 0;
     else i = argument0;
     ret = gamepad_axis_value(i, gp_axislh);
-    if(ret > 0.2) return ret + 0.2;
+    if(ret > 0.2) return ret;
     else return 0;
 }
 
