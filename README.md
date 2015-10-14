@@ -42,7 +42,7 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
     * Animations: idle, walk, run, standing jump, running jump, climb ladder, basic melee, dazed, teleport.
     * Tapping special while moving causes Sallie to instantaneously teleport horizontally 3 meters. If she was standing still, she is turned the other way when she reappears.
  * **Ruff** the rhinoceros. He is slow, but takes less damage. He can perform a groundpound that stuns nearby enemies, allowing him to get in a few easy shots.
-    * Stats: 75% movement speed, 75% damage rate, 150% basic melee strength, 7 second special cooldown.
+    * Stats: 75% movement speed, 75% damage rate, 150% basic melee strength, 15 second special cooldown.
     * Animations: idle, walk, run, standing jump, running jump, climb ladder, basic melee, dazed, groundpound.
     * Tapping special causes Ruff to stomp the ground with his foot, sending a shockwave out 5 meters radially from his location. Any characters within this radius who are not airborne will be stunned for 2 seconds.
  * **Aerie** the fey. She can fly, and divebombs her enemies.
@@ -55,21 +55,21 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
 ## Weapons
 
  * **Basic Melee** is always available, but you need to be standing right next to your oponnent.
-    * Damage per Strike: 3 HP
+    * Damage per Strike: 8 HP
     * Knockback per Strike: 0.2 meters
     * Cooldown Time: 0.75 seconds
     * Starting Ammunition: Unlimited
  * **Basic Rifle** shoots small balls of energy horizontally.
-    * Damage per Strike: 0.5 HP
+    * Damage per Strike: 3 HP
     * Knockback per Strike: none
     * Cooldown Time: 0.1 seconds
     * Starting Ammunition: 150
  * **Acid Gun** shoots globs of acid out in an arc which fall downwards, pooling on the ground for a short time.
-    * Damage per Strike: 0.5 HP
+    * Damage per Strike: 3 HP
     * Knockback per Strike: none
     * Notes: The globs do not go away once they touch an enemy, and continue to do 0.5 HP of damage for each frame that the character is standing in the glob. The globs go away after 4 seconds.
  * **Missile Launcher** shoots slow-moving missles that move towards the nearest enemy.
-    * Damage per Strike: 15 HP
+    * Damage per Strike: 25 HP
     * Knockback per Strike: 1.5 meters
     * Cooldown Time: 2 seconds
     * Starting Ammunition: none
@@ -87,4 +87,7 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
 
 ## Arenas
 
- * Four arenas TBD!
+ * **The Knoll** is a grassy platformer arena. There are happy flowers that dance in the background, fluffy clouds drift by, and there are cute bubbles in the water. This is the most basic level.
+ * **The Station** is a mining base on the moon. There are machines trundling back and forth in the background while computer screens run simulations above you. Gravity here is lower than normal.
+ * **The Ruins** is the site of an ancient temple that has since crumbled.
+ * One more arena TBD!
