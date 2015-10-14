@@ -2,6 +2,8 @@
 
 A local multiplayer arena deathmatch platformer game. Two players choose from four characters then choose from one of four arenas to play in. Ranged weapons are scattered throughout the arena. Characters each have unique movement and special attacks.
 
+To see how to download the project, see `DEVELOPING.md`.
+
 ## Mechanics
 
  * Characters start with 100 health and 3 lives. When their health is depleted or they fall off the edge of an arena, they lose one life. When one of the characters loses all three lives, the game is over and the other is declared the winner.
@@ -58,7 +60,7 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
     * Knockback per Strike: none
     * Cooldown Time: 0.1 seconds
     * Starting Ammunition: 150
- * **Acide Gun** shoots globs of acid out in an arc which fall downwards, pooling on the ground for a short time.
+ * **Acid Gun** shoots globs of acid out in an arc which fall downwards, pooling on the ground for a short time.
     * Damage per Strike: 0.5 HP
     * Knockback per Strike: none
     * Notes: The globs do not go away once they touch an enemy, and continue to do 0.5 HP of damage for each frame that the character is standing in the glob. The globs go away after 4 seconds.
@@ -74,7 +76,7 @@ This game requires at least one XBox360 controller plugged into your PC. If you 
     * Respawn Time: 30 seconds
  * **Basic Rifle Ammunition Pack** provides 100 additional basic rifle ammunition.
     * Respawn Time: 10 seconds
- * **Misile Launcher Ammunition Pack** provides 3 additional missiles.
+ * **Missile Launcher Ammunition Pack** provides 3 additional missiles.
     * Respawn Time: 45 seconds
 
 ## Arenas
