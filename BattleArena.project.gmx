@@ -103,6 +103,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_keypressed.gml</script>
+    <script>scripts\scr_collisions.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
@@ -163,6 +164,9 @@
           <object>objects\obj_plat_bg_grass_narrow_bot</object>
           <object>objects\obj_plat_bg_grass_tiny</object>
         </objects>
+      </objects>
+      <objects name="parents">
+        <object>objects\obj_plat_par_solid</object>
       </objects>
     </objects>
     <objects name="decorations">
