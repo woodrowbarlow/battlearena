@@ -4,4 +4,4 @@ A local multiplayer arena deathmatch platformer game. Two players choose from fo
 
 To see how to download the project, see `DEVELOPING.md`.
 
-See the wiki on Github (or clone it from https://github.com/woodrowbarlow/battlearena.wiki.git) for details about characters, weapons, arenas, etc.
+See the [wiki on Github](https://github.com/woodrowbarlow/battlearena/wiki) (or git-clone it from https://github.com/woodrowbarlow/battlearena.wiki.git) for details about characters, weapons, arenas, etc.
