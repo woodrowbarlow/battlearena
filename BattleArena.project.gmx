@@ -167,6 +167,7 @@
       </objects>
       <objects name="parents">
         <object>objects\obj_plat_par_solid</object>
+        <object>objects\obj_plat_par_semisolid</object>
       </objects>
     </objects>
     <objects name="decorations">
