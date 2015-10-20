@@ -79,9 +79,13 @@ for(i=0; i&lt;number_of_players; i++) {
         }
     }
     if(scr_pressed_start(i, false) || scr_pressed_primary(i, false)) {
-        selected_characters[i] = character_objects[i];
-        show_debug_message(selected_characters[i]);
+        selected_characters[i] = character_objects[player_selection[i]];
     }
+}
+// for testing purposes: if there's not a controller plugged in, pick a random character
+if(controller_count &lt; 1 &amp;&amp; selected_characters[1] &lt; 0) {
+    player_selection[1] = floor(random(4));
+    selected_characters[1] = character_objects[player_selection[1]];
 }
 if(selected_characters[0] &gt;= 0 &amp;&amp; selected_characters[1] &gt;= 0) {
     room_goto(rm_menus_arenaselect);
