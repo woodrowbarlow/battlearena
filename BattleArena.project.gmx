@@ -125,6 +125,7 @@
   <scripts name="scripts">
     <script>scripts\scr_keypressed.gml</script>
     <script>scripts\scr_character_physics.gml</script>
+    <script>scripts\scr_character_death.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>

@@ -26,11 +26,8 @@ if(place_meeting(argument0.x,argument0.y+1,obj_plat_par_solid)
 else {
     // you can't control movement in mid-air as well
     argument0.delta_x += 0.25 * max_move_speed * move_horiz;
-    if(argument0.delta_x > max_move_speed) {
-        argument0.delta_x = max_move_speed;
-    }
-    else if(argument0.delta_x < -max_move_speed) {
-        argument0.delta_x = -max_move_speed;
+    if(abs(argument0.delta_x) > max_move_speed) {
+        argument0.delta_x = sign(move_horiz) * max_move_speed;
     }
     // apply a force downward
     argument0.delta_y += argument0.arena_gravity;

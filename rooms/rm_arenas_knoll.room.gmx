@@ -29,8 +29,10 @@ for(i = 0; i &lt; number_of_players; i++) {
     inst.character_instance_id = inst;
     inst.player_id = i;
     inst.arena_gravity = arena_gravity;
-    inst.character_health = 100;
-    inst.character_lives = 5;
+    inst.character_health = starting_hp;
+    inst.character_lives = starting_lives;
+    inst.spawn_coords[0] = spawn_locations[i,0];
+    inst.spawn_coords[1] = spawn_locations[i,1];
 }</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
@@ -173,7 +175,6 @@ for(i = 0; i &lt; number_of_players; i++) {
     <instance objName="obj_plat_bg_grass_top_lcap_outer" x="32" y="160" name="inst_0F93785A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_top_rcap_outer" x="64" y="160" name="inst_308957CF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_top_rcap_far" x="96" y="160" name="inst_31795088" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_plat_bg_grass_tiny" x="384" y="64" name="inst_5D1307B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_top_ledge" x="544" y="224" name="inst_D3F3DAFB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_top_mid" x="576" y="224" name="inst_A0D936C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_top_mid" x="608" y="224" name="inst_72F9D4C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -219,7 +220,6 @@ for(i = 0; i &lt; number_of_players; i++) {
     <instance objName="obj_deco_elem_ladder" x="384" y="160" name="inst_B78A2D9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_elem_ladder" x="384" y="128" name="inst_322A9A7F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_elem_ladder" x="384" y="96" name="inst_7D401787" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_deco_elem_ladder" x="384" y="64" name="inst_BC4C6CFF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_elem_bridge_lcap" x="448" y="32" name="inst_7184A225" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_elem_bridge_rcap" x="608" y="32" name="inst_23A40443" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_elem_bridge_lslope_inner" x="480" y="32" name="inst_B4E119E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -259,9 +259,7 @@ for(i = 0; i &lt; number_of_players; i++) {
     <instance objName="obj_plat_fg_grass_top_lcap_far" x="128" y="64" name="inst_D486359B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_fg_grass_top_lcap_far" x="576" y="64" name="inst_5CE5176C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_fg_grass_top_lcap_far" x="544" y="224" name="inst_30665B90" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_plat_fg_grass_top_lcap_far" x="384" y="64" name="inst_B1CC27B7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_fg_grass_top_rcap_far" x="480" y="64" name="inst_8154023F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_plat_fg_grass_top_rcap_far" x="384" y="64" name="inst_60BA0B67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_top_lcap_far" x="384" y="320" name="inst_4E9B83FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_deco_plants_flower1" x="352" y="320" name="inst_B10CCE01" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_top_ledge" x="128" y="352" name="inst_1084AEC6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -278,6 +276,9 @@ for(i = 0; i &lt; number_of_players; i++) {
     <instance objName="obj_plat_bg_grass_mid_ledge" x="128" y="416" name="inst_E1F08EF0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_mid_redge" x="224" y="384" name="inst_8E4E35C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_plat_bg_grass_mid_redge" x="224" y="416" name="inst_3FE01C42" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_ladder" x="384" y="64" name="inst_9232B24D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_rcap_far" x="384" y="64" name="inst_509CA533" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_plat_fg_grass_top_lcap_far" x="384" y="64" name="inst_69C6EA0A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

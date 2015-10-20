@@ -25,11 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar number_of_players, selected_characters;
+            <string>globalvar number_of_players, selected_characters, starting_lives, starting_hp;
 number_of_players = 2;
-
 selected_characters[0] = -1;
 selected_characters[1] = -1;
+starting_lives = 5;
+starting_hp = 100;
 
 character_names[0] = "Sallie the Salamander";
 character_names[1] = "Ruff the Rhinoceros";

@@ -53,6 +53,7 @@ special_cooldown = 2;   // 2 second cooldown for special attack
           <argument>
             <kind>1</kind>
             <string>scr_character_physics(character_instance_id);
+scr_character_death(character_instance_id);
 </string>
           </argument>
         </arguments>
