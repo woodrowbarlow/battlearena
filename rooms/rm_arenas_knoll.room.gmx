@@ -22,13 +22,15 @@ arena_gravity = 1;
 
 var i,inst;
 for(i = 0; i &lt; number_of_players; i++) {
-    show_debug_message(string(i));
     inst = instance_create(
         spawn_locations[i,0], spawn_locations[i,1],
         selected_characters[i]
         );
+    inst.character_instance_id = inst;
     inst.player_id = i;
     inst.arena_gravity = arena_gravity;
+    inst.character_health = 100;
+    inst.character_lives = 5;
 }</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>

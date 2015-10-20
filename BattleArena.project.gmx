@@ -97,13 +97,34 @@
         <sprite>sprites\spr_characters_sallie_jump</sprite>
         <sprite>sprites\spr_characters_sallie_longjump</sprite>
       </sprites>
+      <sprites name="ruff">
+        <sprite>sprites\spr_characters_ruff_idle</sprite>
+        <sprite>sprites\spr_characters_ruff_walk</sprite>
+        <sprite>sprites\spr_characters_ruff_run</sprite>
+        <sprite>sprites\spr_characters_ruff_jump</sprite>
+        <sprite>sprites\spr_characters_ruff_longjump</sprite>
+      </sprites>
+      <sprites name="aerie">
+        <sprite>sprites\spr_characters_aerie_idle</sprite>
+        <sprite>sprites\spr_characters_aerie_walk</sprite>
+        <sprite>sprites\spr_characters_aerie_run</sprite>
+        <sprite>sprites\spr_characters_aerie_jump</sprite>
+        <sprite>sprites\spr_characters_aerie_longjump</sprite>
+      </sprites>
+      <sprites name="penn">
+        <sprite>sprites\spr_characters_penn_idle</sprite>
+        <sprite>sprites\spr_characters_penn_walk</sprite>
+        <sprite>sprites\spr_characters_penn_run</sprite>
+        <sprite>sprites\spr_characters_penn_jump</sprite>
+        <sprite>sprites\spr_characters_penn_longjump</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_keypressed.gml</script>
-    <script>scripts\scr_collisions.gml</script>
+    <script>scripts\scr_character_physics.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
@@ -111,6 +132,9 @@
   <objects name="objects">
     <objects name="characters">
       <object>objects\obj_characters_sallie</object>
+      <object>objects\obj_characters_ruff</object>
+      <object>objects\obj_characters_aerie</object>
+      <object>objects\obj_characters_penn</object>
     </objects>
     <objects name="platforms">
       <objects name="foreground">

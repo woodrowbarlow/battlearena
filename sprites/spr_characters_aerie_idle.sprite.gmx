@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>6</bbox_left>
-  <bbox_right>24</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>28</bbox_bottom>
+  <bbox_left>10</bbox_left>
+  <bbox_right>20</bbox_right>
+  <bbox_top>1</bbox_top>
+  <bbox_bottom>31</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -20,8 +20,6 @@
   <width>32</width>
   <height>32</height>
   <frames>
-    <frame index="0">images\spr_characters_sallie_jump_0.png</frame>
-    <frame index="1">images\spr_characters_sallie_jump_1.png</frame>
-    <frame index="2">images\spr_characters_sallie_jump_2.png</frame>
+    <frame index="0">images\spr_characters_aerie_idle_0.png</frame>
   </frames>
 </sprite>
