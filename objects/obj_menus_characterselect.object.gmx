@@ -27,9 +27,97 @@
             <kind>1</kind>
             <string>globalvar number_of_players, selected_characters;
 number_of_players = 2;
-selected_characters[0] = obj_characters_sallie;
-selected_characters[1] = obj_characters_sallie;
-room_goto(rm_arenas_knoll);
+
+selected_characters[0] = -1;
+selected_characters[1] = -1;
+
+character_names[0] = "Sallie the Salamander";
+character_names[1] = "Ruff the Rhinoceros";
+character_names[2] = "Aerie the Fey";
+character_names[3] = "Penn the Penguin";
+character_objects[0] = obj_characters_sallie;
+character_objects[1] = obj_characters_ruff;
+character_objects[2] = obj_characters_aerie;
+character_objects[3] = obj_characters_penn;
+
+player_selection[0] = 0;
+player_selection[1] = 0;
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var i,dir;
+for(i=0; i&lt;number_of_players; i++) {
+    if(selected_characters[i] &lt; 0) {
+        dir = scr_pressed_right(i, false) - scr_pressed_left(i, false);
+        player_selection[i] += dir;
+        if(player_selection[i] &lt; 0) {
+            player_selection[i] = array_length_1d(character_objects) - 1;
+        }
+        else if(player_selection[i] &gt;= array_length_1d(character_objects)) {
+            player_selection[i] = 0;
+        }
+    }
+    if(scr_pressed_start(i, false) || scr_pressed_primary(i, false)) {
+        selected_characters[i] = character_objects[i];
+        show_debug_message(selected_characters[i]);
+    }
+}
+if(selected_characters[0] &gt;= 0 &amp;&amp; selected_characters[1] &gt;= 0) {
+    room_goto(rm_menus_arenaselect);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_set_font(fnt_default);
+draw_set_color(c_white);
+
+if(selected_characters[0] &gt;= 0) draw_set_color(c_lime);
+draw_text(view_wview[0] / 4, view_hview[0] / 2, string(character_names[player_selection[0]]));
+if(selected_characters[1] &gt;= 0) draw_set_color(c_lime);
+else draw_set_color(c_white);
+draw_text(3 * view_wview[0] / 4, view_hview[0] / 2, string(character_names[player_selection[1]]));
 </string>
           </argument>
         </arguments>
