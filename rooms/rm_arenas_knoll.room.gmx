@@ -10,13 +10,13 @@
   <persistent>0</persistent>
   <colour>16757845</colour>
   <showcolour>-1</showcolour>
-  <code>spawn_locations[0,0] = 32;
+  <code>spawn_locations[0,0] = 48;
 spawn_locations[0,1] = 352;
-spawn_locations[1,0] = 576;
+spawn_locations[1,0] = 592;
 spawn_locations[1,1] = 352;
-spawn_locations[2,0] = 544;
+spawn_locations[2,0] = 556;
 spawn_locations[2,1] = 160;
-spawn_locations[3,0] = 192;
+spawn_locations[3,0] = 208;
 spawn_locations[3,1] = 32;
 arena_gravity = 1;
 
@@ -33,6 +33,8 @@ for(i = 0; i &lt; number_of_players; i++) {
     inst.character_lives = starting_lives;
     inst.spawn_coords[0] = spawn_locations[i,0];
     inst.spawn_coords[1] = spawn_locations[i,1];
+    inst.delta_x = 0;
+    inst.delta_y = 0;
 }</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>

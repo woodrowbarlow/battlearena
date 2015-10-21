@@ -1,3 +1,4 @@
+#define scr_character_physics
 ///scr_character_physics(character_instance_id)
 
 // read input from controller/keyboard
@@ -63,22 +64,25 @@ if(place_meeting(argument0.x, argument0.y + argument0.delta_y, obj_plat_par_soli
 
 // if we're falling onto a semisolid platform
 // (these are platforms that you can only collide with from above)
-else if(argument0.delta_y > 0 &&
+else if(argument0.delta_y > 0 && move_vert <= 0.7 &&
     place_meeting(argument0.x, argument0.y + argument0.delta_y, obj_plat_par_semisolid) &&
     !place_meeting(argument0.x,argument0.y,obj_plat_par_semisolid)) {
-    if(move_vert > 0.7) {
+    // get as close to it as we can without actually intersecting
+    while(!place_meeting(argument0.x, argument0.y+1, obj_plat_par_semisolid)) {
         argument0.y ++;
     }
-    else {
-        // get as close to it as we can without actually intersecting
-        while(!place_meeting(argument0.x, argument0.y+1, obj_plat_par_semisolid)) {
-            argument0.y ++;
-        }
-        // then stop moving vertically
-        argument0.delta_y = 0;
-    }
+    // then stop moving vertically
+    argument0.delta_y = 0;
 }
 
 // update our coordinates
 argument0.x += argument0.delta_x;
 argument0.y += argument0.delta_y;
+
+#define scr_is_on_floor
+///scr_is_on_floor(character_instance_id)
+
+return (place_meeting(argument0.x,argument0.y+1,obj_plat_par_solid) ||
+    (argument0.delta_y == 0 && 
+    place_meeting(argument0.x,argument0.y+1,obj_plat_par_semisolid) &&
+    !place_meeting(argument0.x,argument0.y,obj_plat_par_semisolid)));

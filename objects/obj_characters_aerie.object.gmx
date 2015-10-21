@@ -26,10 +26,19 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize Variables
+
+// character stats
 jump_height = 1.5;      // 150% jump height
 move_speed = 1;         // 100% running speed
 damage_reduction = 0;   // 0% general damage reduction
 special_cooldown = 0;   // 0 second cooldown for special attack
+
+// character animations
+idle_sprite = spr_characters_aerie_idle;
+walk_sprite = spr_characters_aerie_walk;
+run_sprite = spr_characters_aerie_run;
+standing_jump_sprite = spr_characters_aerie_jump;
+running_jump_sprite = spr_characters_aerie_longjump;
 </string>
           </argument>
         </arguments>
@@ -52,8 +61,10 @@ special_cooldown = 0;   // 0 second cooldown for special attack
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_character_physics(character_instance_id);
+            <string>/// Update Status
+scr_character_physics(character_instance_id);
 scr_character_death(character_instance_id);
+scr_character_animate(character_instance_id);
 </string>
           </argument>
         </arguments>
