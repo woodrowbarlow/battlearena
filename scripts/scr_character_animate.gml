@@ -21,7 +21,7 @@ if(scr_is_on_floor(argument0)) {
     else {
         sprite_index = argument0.idle_sprite;
     }
-    image_speed = 0.25;
+    image_speed = 0.25 * argument0.move_speed;
 }
 else if(sprite_index == argument0.standing_jump_sprite ||
     sprite_index == argument0.running_jump_sprite) {

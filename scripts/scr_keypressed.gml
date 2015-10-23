@@ -4,7 +4,7 @@ if(argument0 < 0) {
 
     // if a negative value was passed as the player argument, that means "any player"
     // this is used in menus
-    for(i = 0; i < max(controller_count, 1); i++) {
+    for(i = 0; i < 2; i++) {
         if(scr_keypressed(i, argument1, argument2, argument3) > 0) return 1;
     }
     return 0;

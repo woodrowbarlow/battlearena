@@ -6,7 +6,7 @@ var move_horiz = scr_pressed_right(argument0.player_id, true) - scr_pressed_left
 var move_vert = scr_pressed_down(argument0.player_id, true) - scr_pressed_up(argument0.player_id, true);
 var jump = scr_pressed_jump(argument0.player_id, false);
 var max_move_speed = 4 * argument0.move_speed;
-var max_jump_height = 11 * argument0.jump_height;
+var max_jump_height = 12 * argument0.jump_height;
 var terminal_velocity = 10*argument0.arena_gravity;
 
 // if we're standing on solid ground
@@ -26,7 +26,7 @@ if(place_meeting(argument0.x,argument0.y+1,obj_plat_par_solid)
 // if we're in mid-air
 else {
     // you can't control movement in mid-air as well
-    argument0.delta_x += 0.25 * max_move_speed * move_horiz;
+    argument0.delta_x += 0.15 * max_move_speed * move_horiz;
     if(abs(argument0.delta_x) > max_move_speed) {
         argument0.delta_x = sign(move_horiz) * max_move_speed;
     }
