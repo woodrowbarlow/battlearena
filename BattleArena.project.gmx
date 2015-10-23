@@ -241,6 +241,9 @@
       <object>objects\obj_menus_arenaselect</object>
       <object>objects\obj_menus_options</object>
     </objects>
+    <objects name="projectile">
+      <object>objects\obj_rifle_bullet</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="menus">
