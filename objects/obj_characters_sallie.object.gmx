@@ -32,6 +32,7 @@ jump_height = 1;        // 100% jump height
 move_speed = 1.25;      // 125% running speed
 damage_reduction = 0;   // 0% general damage reduction
 special_cooldown = 2;   // 2 second cooldown for special attack
+airjump_limit = 0;      // cannot jump again in midair
 
 // character animations
 idle_sprite = spr_characters_sallie_idle;

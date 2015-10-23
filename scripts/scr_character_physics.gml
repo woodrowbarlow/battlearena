@@ -21,10 +21,15 @@ if(place_meeting(argument0.x,argument0.y+1,obj_plat_par_solid)
         // for y-axis, positive is down and negative is up
         argument0.delta_y = -max_jump_height;
     }
+    argument0.airjumps_remaining = argument0.airjump_limit;
 }
 
 // if we're in mid-air
 else {
+    if(jump && argument0.airjumps_remaining > 0) {
+        argument0.delta_y = -max_jump_height * argument0.airjump_height;
+        argument0.airjumps_remaining --;
+    }
     // you can't control movement in mid-air as well
     argument0.delta_x += 0.15 * max_move_speed * move_horiz;
     if(abs(argument0.delta_x) > max_move_speed) {

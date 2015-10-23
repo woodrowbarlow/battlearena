@@ -29,6 +29,7 @@ for(i = 0; i &lt; number_of_players; i++) {
     inst.character_instance_id = inst;
     inst.player_id = i;
     inst.arena_gravity = arena_gravity;
+    inst.airjumps_remaining = inst.airjump_limit;
     inst.character_health = starting_hp;
     inst.character_lives = starting_lives;
     inst.spawn_coords[0] = spawn_locations[i,0];

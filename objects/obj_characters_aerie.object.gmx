@@ -28,10 +28,12 @@
             <string>/// Initialize Variables
 
 // character stats
-jump_height = 1.5;      // 150% jump height
+jump_height = 1.25;      // 150% jump height
 move_speed = 1;         // 100% running speed
 damage_reduction = 0;   // 0% general damage reduction
 special_cooldown = 0;   // 0 second cooldown for special attack
+airjump_limit = 3;      // 3 midair jumps allowed
+airjump_height = 0.5;   // 50% airjump height
 
 // character animations
 idle_sprite = spr_characters_aerie_idle;
