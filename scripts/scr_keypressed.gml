@@ -177,8 +177,7 @@ buttons[1] = gp_start;
 return scr_keypressed(argument0, keys, buttons, argument1);
 #define scr_pressed_jump
 var keys, buttons;
-keys[0] = ord("W");
-keys[1] = vk_up;
+keys[0] = vk_space;
 buttons[0] = gp_face1;
 buttons[1] = gp_padu;
 return scr_keypressed(argument0, keys, buttons, argument1);
