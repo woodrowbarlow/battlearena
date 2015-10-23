@@ -62,9 +62,28 @@ if(place_meeting(argument0.x, argument0.y + argument0.delta_y, obj_plat_par_soli
     argument0.delta_y = 0;
 }
 
+if(place_meeting(argument0.x,argument0.y + 1,obj_plat_par_semisolid) &&
+    !place_meeting(argument0.x,argument0.y,obj_plat_par_semisolid) &&
+    place_meeting(argument0.x + argument0.delta_x,argument0.y,obj_plat_par_semisolid)) {
+    var dx;
+    for(dx = 0; dx <= delta_x; dx++) {
+        if(!place_meeting(argument0.x + 1,argument0.y,obj_plat_par_solid)) argument0.x ++;
+        if(place_meeting(argument0.x + 1,argument0.y,obj_plat_par_semisolid)) {
+            if(!place_meeting(argument0.x + 1, argument0.y - 1, obj_plat_par_semisolid)) {
+                argument0.y --;
+            }
+            else if(!place_meeting(argument0.x + 1, argument0.y - 2, obj_plat_par_semisolid)) {
+                argument0.y -= 2;
+            }
+            else break;
+        }
+    }
+    argument0.delta_x = 0;
+}
+
 // if we're falling onto a semisolid platform
 // (these are platforms that you can only collide with from above)
-else if(argument0.delta_y > 0 && move_vert <= 0.7 &&
+if(argument0.delta_y > 0 && move_vert <= 0.7 &&
     place_meeting(argument0.x, argument0.y + argument0.delta_y, obj_plat_par_semisolid) &&
     !place_meeting(argument0.x,argument0.y,obj_plat_par_semisolid)) {
     // get as close to it as we can without actually intersecting
