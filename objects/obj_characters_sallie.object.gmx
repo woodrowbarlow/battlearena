@@ -66,6 +66,7 @@ running_jump_sprite = spr_characters_sallie_longjump;
 scr_character_physics(character_instance_id);
 scr_character_death(character_instance_id);
 scr_character_animate(character_instance_id);
+scr_character_weaponUse(character_instance_id);
 </string>
           </argument>
         </arguments>
