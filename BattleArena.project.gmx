@@ -123,6 +123,11 @@
         <sprite>sprites\spr_characters_penn_longjump</sprite>
       </sprites>
     </sprites>
+    <sprites name="weapons">
+      <sprite>sprites\spr_rifle</sprite>
+      <sprite>sprites\spr_shotgun</sprite>
+      <sprite>sprites\spr_acidGun</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

@@ -9,6 +9,22 @@ var max_move_speed = 4 * argument0.move_speed;
 var max_jump_height = 12 * argument0.jump_height;
 var terminal_velocity = 10*argument0.arena_gravity;
 
+if(argument0.on_ladder) {
+    var dx = move_horiz * max_move_speed;
+    var dy = move_vert * max_move_speed;
+    if(jump > 0) {
+        argument0.delta_y -= max_jump_height / 1.5;
+        argument0.on_ladder = false;
+        return 0;
+    }
+    argument0.x += dx;
+    argument0.y += dy;
+    if(!place_meeting(argument0.x, argument0.y, obj_deco_elem_ladder)) {
+        argument0.on_ladder = false;
+    }
+    return 0;
+}
+
 // if we're standing on solid ground
 if(place_meeting(argument0.x,argument0.y+1,obj_plat_par_solid)
     || (move_vert <= 0 && place_meeting(argument0.x,argument0.y+1,obj_plat_par_semisolid) &&
@@ -16,6 +32,10 @@ if(place_meeting(argument0.x,argument0.y+1,obj_plat_par_solid)
     // move_speed is a signed float from -1 to 1 indicating magnitude and direction
     argument0.delta_x = max_move_speed * move_horiz;
     argument0.delta_y = 0;
+    if(place_meeting(argument0.x,argument0.y,obj_deco_elem_ladder) && move_vert <= 0.7) {
+        argument0.on_ladder = true;
+        return 0;
+    }
     // if jump was pressed since last frame
     if(jump > 0) {
         // for y-axis, positive is down and negative is up
