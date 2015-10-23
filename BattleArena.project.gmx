@@ -4,7 +4,11 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="arenas">
+      <sound>sound\snd_arenas_knoll</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprites name="platforms">
       <sprites name="foreground">
@@ -123,10 +127,12 @@
         <sprite>sprites\spr_characters_penn_longjump</sprite>
       </sprites>
     </sprites>
-    <sprites name="weapons">
+    <sprites name="items">
       <sprite>sprites\spr_rifle</sprite>
       <sprite>sprites\spr_shotgun</sprite>
       <sprite>sprites\spr_acidGun</sprite>
+      <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_health</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -243,6 +249,11 @@
     </objects>
     <objects name="projectile">
       <object>objects\obj_rifle_bullet</object>
+    </objects>
+    <objects name="music">
+      <objects name="arenas">
+        <object>objects\obj_music_arenas_knoll</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
