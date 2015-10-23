@@ -83,9 +83,13 @@
         <sprite>sprites\spr_deco_elem_bridge_lcap</sprite>
         <sprite>sprites\spr_deco_elem_bridge_rcap</sprite>
         <sprite>sprites\spr_deco_elem_bridge_lslope_outer</sprite>
+        <sprite>sprites\spr_deco_elem_bridge_lslope_outer_mask</sprite>
         <sprite>sprites\spr_deco_elem_bridge_lslope_inner</sprite>
+        <sprite>sprites\spr_deco_elem_bridge_lslope_inner_mask</sprite>
         <sprite>sprites\spr_deco_elem_bridge_rslope_outer</sprite>
+        <sprite>sprites\spr_deco_elem_bridge_rslope_outer_mask</sprite>
         <sprite>sprites\spr_deco_elem_bridge_rslope_inner</sprite>
+        <sprite>sprites\spr_deco_elem_bridge_rslope_inner_mask</sprite>
         <sprite>sprites\spr_deco_elem_bridge_mid</sprite>
       </sprites>
     </sprites>
