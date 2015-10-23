@@ -4,7 +4,11 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="arenas">
+      <sound>sound\snd_arenas_knoll</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprites name="platforms">
       <sprites name="foreground">
@@ -240,6 +244,11 @@
       <object>objects\obj_menus_characterselect</object>
       <object>objects\obj_menus_arenaselect</object>
       <object>objects\obj_menus_options</object>
+    </objects>
+    <objects name="music">
+      <objects name="arenas">
+        <object>objects\obj_music_arenas_knoll</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
