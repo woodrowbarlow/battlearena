@@ -35,8 +35,9 @@ special_cooldown = 2;   // 2 second cooldown for special attack
 airjump_limit = 0;      // cannot jump again in midair
 
 //no weapon - 0, auto rifle - 1, shotgun - 2, acid - 3, rocket - 4
-weapon_held = 0;
+weapon_held = 1; //should start as 0. changed for testing.
 ammo = 0;
+facing = 1; //1 for facing right, -1 for facing left. add this line to other characters
 
 // character animations
 idle_sprite = spr_characters_sallie_idle;

@@ -36,7 +36,9 @@ else {
 
 if(argument0.delta_x < 0) {
     image_xscale = -1;
+    argument0.facing = -1;
 }
 else if(argument0.delta_x > 0) {
     image_xscale = 1;
+    argument0.facing = 1;
 }
