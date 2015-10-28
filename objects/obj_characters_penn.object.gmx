@@ -37,9 +37,9 @@ airjump_limit = 0;      // cannot jump again in midair
 // weapon information
 weapon_held = 0;
 weapon_ammos[0] = -1;   // infinite melee attack
-weapon_ammos[1] = 150;  // start with 150 rounds of auto rifle ammo
-weapon_ammos[2] = 120;  // start with 120 rounds of shutgun ammo
-weapon_ammos[3] = 50;   // start with 50 rounds of acid gun ammo
+weapon_ammos[1] = 75;  // start with 75 rounds of auto rifle ammo
+weapon_ammos[2] = 35;  // start with 35 rounds of shutgun ammo
+weapon_ammos[3] = 20;   // start with 20 rounds of acid gun ammo
 weapon_ammos[4] = 0;    // start with no rounds of seeker rocket ammo
 
 // character animations

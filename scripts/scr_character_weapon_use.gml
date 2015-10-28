@@ -86,23 +86,23 @@ if (!argument0.on_ladder && held_attack > 0 &&
         // for shotgun, you can't hold down the fire button
         // so if it wasn't just pressed, then terminate.
         if (pressed_attack == 0) break;
-        // shotgun uses 6 bullets per shot, so if the player
+        // shotgun uses 5 bullets per shot, so if the player
         // doesn't have at least that much ammo, terminate.
-        if (argument0.weapon_ammos[2] < 6) {
+        if (argument0.weapon_ammos[2] < 5) {
             // this should be impossible since we give ammo packs in
-            // multiples of 6, but we need to be sure.
+            // multiples of 5, but we need to be sure.
             show_debug_message("player " + string(argument0.player_id) +
                 " doesn't have enough ammo to fire the shotgun (=" +
                 string(argument0.weapon_ammos[2]));
             break;
         }
         // otherwise, go ahead and deduct the ammo.
-        argument0.weapon_ammos[2] -= 6;
+        argument0.weapon_ammos[2] -= 5;
         show_debug_message("player " + string(argument0.player_id) +
             " firing shotgun");
         show_debug_message("shotgun ammo remaining: " +
             string(argument0.weapon_ammos[2]));
-        // TODO: spawn 6 shotgun bullets in a fan spread
+        // TODO: spawn 5 shotgun bullets in a fan spread
         break;
     // acid gun
     case 3:
