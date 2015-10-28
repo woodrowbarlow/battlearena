@@ -183,7 +183,35 @@ buttons[1] = gp_padu;
 return scr_keypressed(argument0, keys, buttons, argument1);
 #define scr_pressed_fire
 var keys, buttons;
-keys[0] = ord('Z');
-keys[1] = ord('X');
-buttons[0] = gp_shoulderr;
+keys[0] = vk_shift;
+buttons[0] = gp_face4;
+buttons[1] = gp_shoulderrb;
+return scr_keypressed(argument0, keys, buttons, argument1);
+
+#define scr_pressed_prev_weapon
+var keys, buttons;
+keys[0] = ord('Q');
+keys[1] = vk_f1;
+buttons[1] = gp_shoulderl;
+return scr_keypressed(argument0, keys, buttons, argument1);
+
+#define scr_pressed_next_weapon
+var keys, buttons;
+keys[0] = ord('E');
+keys[1] = vk_f2;
+buttons[1] = gp_shoulderr;
+return scr_keypressed(argument0, keys, buttons, argument1);
+
+#define scr_pressed_melee
+var keys, buttons;
+keys[0] = vk_control;
+buttons[0] = gp_face2;
+buttons[1] = gp_shoulderlb;
+return scr_keypressed(argument0, keys, buttons, argument1);
+
+#define scr_pressed_special
+var keys, buttons;
+keys[0] = ord('X');
+keys[1] = ord('Y');
+buttons[0] = gp_face3;
 return scr_keypressed(argument0, keys, buttons, argument1);

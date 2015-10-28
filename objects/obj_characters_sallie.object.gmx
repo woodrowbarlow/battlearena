@@ -34,10 +34,13 @@ damage_reduction = 0;   // 0% general damage reduction
 special_cooldown = 2;   // 2 second cooldown for special attack
 airjump_limit = 0;      // cannot jump again in midair
 
-//no weapon - 0, auto rifle - 1, shotgun - 2, acid - 3, rocket - 4
-weapon_held = 1; //should start as 0. changed for testing.
-ammo = 0;
-facing = 1; //1 for facing right, -1 for facing left. add this line to other characters
+// weapon information
+weapon_held = 0;
+weapon_ammos[0] = -1;   // infinite melee attack
+weapon_ammos[1] = 150;  // start with 150 rounds of auto rifle ammo
+weapon_ammos[2] = 120;  // start with 120 rounds of shutgun ammo
+weapon_ammos[3] = 50;   // start with 50 rounds of acid gun ammo
+weapon_ammos[4] = 0;    // start with no rounds of seeker rocket ammo
 
 // character animations
 idle_sprite = spr_characters_sallie_idle;
@@ -71,7 +74,7 @@ running_jump_sprite = spr_characters_sallie_longjump;
 scr_character_physics(character_instance_id);
 scr_character_death(character_instance_id);
 scr_character_animate(character_instance_id);
-scr_character_weaponUse(character_instance_id);
+scr_character_weapon_use(character_instance_id);
 </string>
           </argument>
         </arguments>

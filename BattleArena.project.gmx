@@ -128,11 +128,11 @@
       </sprites>
     </sprites>
     <sprites name="items">
-      <sprite>sprites\spr_rifle</sprite>
-      <sprite>sprites\spr_shotgun</sprite>
-      <sprite>sprites\spr_acidGun</sprite>
-      <sprite>sprites\spr_bullet</sprite>
-      <sprite>sprites\spr_health</sprite>
+      <sprite>sprites\spr_item_rifle</sprite>
+      <sprite>sprites\spr_item_shotgun</sprite>
+      <sprite>sprites\spr_item_acidgun</sprite>
+      <sprite>sprites\spr_item_rifle_bullet</sprite>
+      <sprite>sprites\spr_item_health</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -142,7 +142,7 @@
     <script>scripts\scr_character_physics.gml</script>
     <script>scripts\scr_character_death.gml</script>
     <script>scripts\scr_character_animate.gml</script>
-    <script>scripts\scr_character_weaponUse.gml</script>
+    <script>scripts\scr_character_weapon_use.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
@@ -248,7 +248,8 @@
       <object>objects\obj_menus_options</object>
     </objects>
     <objects name="projectile">
-      <object>objects\obj_rifle_bullet</object>
+      <object>objects\obj_proj_rifle_bullet</object>
+      <object>objects\obj_proj_shotgun_bullet</object>
     </objects>
     <objects name="music">
       <objects name="arenas">

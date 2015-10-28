@@ -34,11 +34,9 @@ else {
     image_speed = 0;
 }
 
-if(argument0.delta_x < 0) {
+if(argument0.facing_direction < 0) {
     image_xscale = -1;
-    argument0.facing = -1;
 }
-else if(argument0.delta_x > 0) {
+else if(argument0.facing_direction > 0) {
     image_xscale = 1;
-    argument0.facing = 1;
 }
