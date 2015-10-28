@@ -134,6 +134,13 @@
       <sprite>sprites\spr_item_rifle_bullet</sprite>
       <sprite>sprites\spr_item_health</sprite>
     </sprites>
+    <sprites name="menus">
+      <sprites name="hud">
+        <sprite>sprites\spr_menus_hud_bigheart_1</sprite>
+        <sprite>sprites\spr_menus_hud_bigheart_2</sprite>
+        <sprite>sprites\spr_menus_hud_heart</sprite>
+      </sprites>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -246,6 +253,7 @@
       <object>objects\obj_menus_characterselect</object>
       <object>objects\obj_menus_arenaselect</object>
       <object>objects\obj_menus_options</object>
+      <object>objects\obj_menus_hud</object>
     </objects>
     <objects name="projectile">
       <object>objects\obj_proj_rifle_bullet</object>
