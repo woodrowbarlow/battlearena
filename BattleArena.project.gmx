@@ -156,6 +156,9 @@
   </fonts>
   <objects name="objects">
     <objects name="characters">
+      <objects name="parents">
+        <object>objects\obj_characters_parent</object>
+      </objects>
       <object>objects\obj_characters_sallie</object>
       <object>objects\obj_characters_ruff</object>
       <object>objects\obj_characters_aerie</object>

@@ -20,8 +20,8 @@ spawn_locations[3,0] = 208;
 spawn_locations[3,1] = 32;
 arena_gravity = 1;
 
-var i,inst;
-for(i = 0; i &lt; number_of_players; i++) {
+var i,j,inst;
+for (i = 0; i &lt; number_of_players; i++) {
     inst = instance_create(
         spawn_locations[i,0], spawn_locations[i,1],
         selected_characters[i]
@@ -39,6 +39,11 @@ for(i = 0; i &lt; number_of_players; i++) {
     inst.delta_y = 0;
     if(i % 2 == 0) inst.facing_direction = 1;
     else inst.facing_direction = -1;
+    inst.weapon_timers[0] = 0;
+    inst.weapon_timers[1] = 0;
+    inst.weapon_timers[2] = 0;
+    inst.weapon_timers[3] = 0;
+    inst.weapon_timers[4] = 0;
 }</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>

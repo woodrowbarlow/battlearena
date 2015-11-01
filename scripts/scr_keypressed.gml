@@ -202,13 +202,6 @@ keys[1] = vk_f2;
 buttons[1] = gp_shoulderr;
 return scr_keypressed(argument0, keys, buttons, argument1);
 
-#define scr_pressed_melee
-var keys, buttons;
-keys[0] = vk_control;
-buttons[0] = gp_face2;
-buttons[1] = gp_shoulderlb;
-return scr_keypressed(argument0, keys, buttons, argument1);
-
 #define scr_pressed_special
 var keys, buttons;
 keys[0] = ord('X');

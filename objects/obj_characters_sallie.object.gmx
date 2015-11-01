@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_characters_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -31,16 +31,22 @@
 jump_height = 1;        // 100% jump height
 move_speed = 1.25;      // 125% running speed
 damage_reduction = 0;   // 0% general damage reduction
-special_cooldown = 2;   // 2 second cooldown for special attack
+special_cooldown = 2;   // 2 second cooldown for special attacks
 airjump_limit = 0;      // cannot jump again in midair
+airjump_height = 0.5;   // 50% airjump height
 
 // weapon information
 weapon_held = 0;
 weapon_ammos[0] = -1;   // infinite melee attack
-weapon_ammos[1] = 75;  // start with 75 rounds of auto rifle ammo
-weapon_ammos[2] = 35;  // start with 35 rounds of shutgun ammo
+weapon_ammos[1] = 75;   // start with 75 rounds of auto rifle ammo
+weapon_ammos[2] = 35;   // start with 35 rounds of shutgun ammo
 weapon_ammos[3] = 20;   // start with 20 rounds of acid gun ammo
 weapon_ammos[4] = 0;    // start with no rounds of seeker rocket ammo
+weapon_delays[0] = 1;   // 1 second cooldown for melee attacks
+weapon_delays[1] = 0.5; // 0.5 second cooldown for auto rifle
+weapon_delays[2] = 2;   // 2 second cooldown for shotgun
+weapon_delays[3] = 0.5; // 0.5 second cooldown for acid gun
+weapon_delays[4] = 6;   // 6 second cooldown for seeker rocket
 
 // character animations
 idle_sprite = spr_characters_sallie_idle;
