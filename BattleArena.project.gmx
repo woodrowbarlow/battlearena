@@ -259,6 +259,9 @@
       <object>objects\obj_menus_hud</object>
     </objects>
     <objects name="projectile">
+      <objects name="parents">
+        <object>objects\obj_proj_par_generic</object>
+      </objects>
       <object>objects\obj_proj_rifle_bullet</object>
       <object>objects\obj_proj_shotgun_bullet</object>
     </objects>

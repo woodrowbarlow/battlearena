@@ -82,6 +82,7 @@ if (!argument0.on_ladder && held_attack > 0 &&
         var bullet = instance_create(argument0.x, argument0.y,
             obj_proj_rifle_bullet);
         bullet.hspeed = 3 * argument0.facing_direction;
+        bullet.fired_by = argument0.player_id;
         break;
     // shotgun
     case 2:
@@ -106,27 +107,36 @@ if (!argument0.on_ladder && held_attack > 0 &&
             " firing shotgun");
         show_debug_message("shotgun ammo remaining: " +
             string(argument0.weapon_ammos[2]));
+        // fired at 30 degree ascension
         var bullet = instance_create(argument0.x, argument0.y,
             obj_proj_shotgun_bullet);
         bullet.hspeed = 2.6 * argument0.facing_direction;
         bullet.vspeed = -1.5;
+        bullet.fired_by = argument0.player_id;
+        // fired at 15 degree ascension
         bullet = instance_create(argument0.x, argument0.y,
             obj_proj_shotgun_bullet);
         bullet.hspeed = 2.9 * argument0.facing_direction;
         bullet.vspeed = -0.78;
+        bullet.fired_by = argument0.player_id;
+        // fired at level
         bullet = instance_create(argument0.x, argument0.y,
             obj_proj_shotgun_bullet);
         bullet.hspeed = 3 * argument0.facing_direction;
         bullet.vspeed = 0;
+        bullet.fired_by = argument0.player_id;
+        // fired at 15 degree descension
         bullet = instance_create(argument0.x, argument0.y,
             obj_proj_shotgun_bullet);
         bullet.hspeed = 2.9 * argument0.facing_direction;
         bullet.vspeed = 0.78;
+        bullet.fired_by = argument0.player_id;
+        // fired at 30 degree descension
         bullet = instance_create(argument0.x, argument0.y,
             obj_proj_shotgun_bullet);
         bullet.hspeed = 2.6 * argument0.facing_direction;
         bullet.vspeed = 1.5;
-        // TODO: spawn 5 shotgun bullets in a fan spread
+        bullet.fired_by = argument0.player_id;
         break;
     // acid gun
     case 3:
