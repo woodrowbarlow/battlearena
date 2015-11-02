@@ -116,25 +116,29 @@ show_debug_message("player " + string(argument0.player_id) +
 var damage = 8;
 var knockback = 0.2;
 var range = 0.5;
+var min_x, max_x;
+var min_y, max_y;
 var enemy;
+
+// set up the rectangular hitbox
+min_y = argument0.y - argument0.sprite_height / 2;
+max_y = argument0.y + argument0.sprite_height / 2;
+if (argument0.facing_direction > 0) {
+    min_x = argument0.x;
+    max_x = argument0.x + range * G_GRID_SIZE;
+}
+else {
+    min_x = argument0.x - range * G_GRID_SIZE;
+    max_x = argument0.x;
+}
 
 for (i = 0; i < instance_number(obj_characters_parent); i++) {
     enemy = instance_find(obj_characters_parent, i);
-    if (enemy == argument0) continue;
-    if (argument0.facing_direction > 0 &&
-        enemy.x >= argument0.x &&
-        enemy.x < argument0.x + range * G_GRID_SIZE &&
-        enemy.y > argument0.y - argument0.sprite_height / 2 &&
-        enemy.y < argument0.y + argument0.sprite_height / 2) {
-        
-        enemy.character_health -= damage;
-        enemy.x += sign(argument0.facing_direction) * G_GRID_SIZE * knockback;
-        return 0;   // remove return if punches should go through multiple people
-    }
-    else if (enemy.x <= argument0.x &&
-        enemy.x > argument0.x - range * G_GRID_SIZE &&
-        enemy.y > argument0.y - argument0.sprite_height / 2 &&
-        enemy.y < argument0.y + argument0.sprite_height / 2) {
+    if (enemy == argument0) continue;   // WHY ARE YOU HITTING YOURSELF?
+    
+    // if the enemy is within the hitbox, they get hit
+    if (argument0.x >= min_x && argument0.x <= max_x &&
+        argument0.y >= min_y && argument0.y <= max_y) {
         
         enemy.character_health -= damage;
         enemy.x += sign(argument0.facing_direction) * G_GRID_SIZE * knockback;
