@@ -456,5 +456,14 @@
     <option_xbone_texture_page>1024</option_xbone_texture_page>
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
-  <ConfigConstants/>
+  <ConfigConstants>
+    <constants number="6">
+      <constant name="G_GRID_SIZE">32</constant>
+      <constant name="W_MELEE_ID">0</constant>
+      <constant name="W_AUTO_RIFLE_ID">1</constant>
+      <constant name="W_SHOTGUN_ID">2</constant>
+      <constant name="W_ACID_GUN_ID">3</constant>
+      <constant name="W_SEEKER_ROCKET_ID">4</constant>
+    </constants>
+  </ConfigConstants>
 </Config>
