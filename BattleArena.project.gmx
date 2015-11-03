@@ -139,6 +139,12 @@
         <sprite>sprites\spr_menus_hud_bigheart_1</sprite>
         <sprite>sprites\spr_menus_hud_bigheart_2</sprite>
         <sprite>sprites\spr_menus_hud_heart</sprite>
+        <sprites name="weapons">
+          <sprite>sprites\spr_menus_hud_weap_melee</sprite>
+          <sprite>sprites\spr_menus_hud_weap_auto_rifle</sprite>
+          <sprite>sprites\spr_menus_hud_weap_shotgun</sprite>
+          <sprite>sprites\spr_menus_hud_weap_acid_gun</sprite>
+        </sprites>
       </sprites>
     </sprites>
   </sprites>

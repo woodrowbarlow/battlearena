@@ -8,6 +8,57 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>frame = 0;
+subimage = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>frame ++;
+if (frame &gt; room_speed/4) {
+    subimage ++;
+    frame = 0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -27,22 +78,40 @@
             <kind>1</kind>
             <string>var i;
 
+draw_sprite(spr_menus_hud_bigheart_2, -1, 32, 448);
 draw_sprite_ext(spr_menus_hud_bigheart_1, -1, 32, 448,
     player1_inst_id.character_health / 100.0,
     player1_inst_id.character_health / 100.0,
     0, c_white, 1);
 for (i = 0; i &lt; player1_inst_id.character_lives - 1; i++) {
-    draw_sprite(spr_menus_hud_heart, -1, 60 + (i*16), 464);
+    draw_sprite(spr_menus_hud_heart, subimage + i, 52 + (i*16), 468);
 }
+draw_sprite_ext(spr_menus_hud_weap_melee, -1, 60, 448,
+    0.5, 0.5, 0, c_white, 1);
+draw_sprite_ext(spr_menus_hud_weap_auto_rifle, -1, 76, 448,
+    0.5, 0.5, 0, c_white, 1);
+draw_sprite_ext(spr_menus_hud_weap_shotgun, -1, 92, 448,
+    0.5, 0.5, 0, c_white, 1);
+draw_sprite_ext(spr_menus_hud_weap_acid_gun, -1, 108, 448,
+    0.5, 0.5, 0, c_white, 1);
 
 
+draw_sprite(spr_menus_hud_bigheart_2, -1, 608, 448);
 draw_sprite_ext(spr_menus_hud_bigheart_1, -1, 608, 448,
     player2_inst_id.character_health / 100.0,
     player2_inst_id.character_health / 100.0,
     0, c_white, 1);
 for (i = 0; i &lt; player2_inst_id.character_lives - 1; i++) {
-    draw_sprite(spr_menus_hud_heart, -1, 584 - (i*16), 464);
+    draw_sprite(spr_menus_hud_heart, subimage + i, 592 - (i*16), 468);
 }
+draw_sprite_ext(spr_menus_hud_weap_melee, -1, 528, 448,
+    0.5, 0.5, 0, c_white, 1);
+draw_sprite_ext(spr_menus_hud_weap_auto_rifle, -1, 544, 448,
+    0.5, 0.5, 0, c_white, 1);
+draw_sprite_ext(spr_menus_hud_weap_shotgun, -1, 560, 448,
+    0.5, 0.5, 0, c_white, 1);
+draw_sprite_ext(spr_menus_hud_weap_acid_gun, -1, 576, 448,
+    0.5, 0.5, 0, c_white, 1);
 </string>
           </argument>
         </arguments>

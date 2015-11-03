@@ -35,9 +35,10 @@ if (switch_weapon != 0) {
 
 // this block handles the actual firing of the weapon / melee attack
 // if the character is on a ladder, they can't attack, so skip this
+// if the character just switched to this weapon, don't start firing yet
 // if the attack button isn't pressed, skip this
 // if character is out of ammo in current weapon, skip this
-if (!argument0.on_ladder && held_attack > 0 &&
+if (!argument0.on_ladder && held_attack > 0 && switch_weapon == 0 &&
     argument0.weapon_ammos[argument0.weapon_held] != 0 &&
     argument0.weapon_timers[argument0.weapon_held] <= 0) {
     
@@ -137,8 +138,8 @@ for (i = 0; i < instance_number(obj_characters_parent); i++) {
     if (enemy == argument0) continue;   // WHY ARE YOU HITTING YOURSELF?
     
     // if the enemy is within the hitbox, they get hit
-    if (argument0.x >= min_x && argument0.x <= max_x &&
-        argument0.y >= min_y && argument0.y <= max_y) {
+    if (enemy.x >= min_x && enemy.x <= max_x &&
+        enemy.y >= min_y && enemy.y <= max_y) {
         
         enemy.character_health -= damage;
         enemy.x += sign(argument0.facing_direction) * G_GRID_SIZE * knockback;
