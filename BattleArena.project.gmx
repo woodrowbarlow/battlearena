@@ -281,6 +281,9 @@
         <object>objects\obj_music_arenas_knoll</object>
       </objects>
     </objects>
+    <objects name="items">
+      <object>objects\obj_items_health</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <rooms name="menus">
