@@ -128,9 +128,11 @@
       </sprites>
     </sprites>
     <sprites name="items">
-      <sprite>sprites\spr_item_rifle</sprite>
-      <sprite>sprites\spr_item_shotgun</sprite>
-      <sprite>sprites\spr_item_acidgun</sprite>
+      <sprites name="ammo">
+        <sprite>sprites\spr_item_ammo_auto_rifle</sprite>
+        <sprite>sprites\spr_item_ammo_shotgun</sprite>
+        <sprite>sprites\spr_item_ammo_acid_gun</sprite>
+      </sprites>
       <sprite>sprites\spr_item_rifle_bullet</sprite>
       <sprite>sprites\spr_item_health</sprite>
     </sprites>
@@ -282,7 +284,13 @@
       </objects>
     </objects>
     <objects name="items">
-      <object>objects\obj_items_health</object>
+      <objects name="parents">
+        <object>objects\obj_item_par_ammo</object>
+      </objects>
+      <object>objects\obj_item_health</object>
+      <object>objects\obj_item_ammo_auto_rifle</object>
+      <object>objects\obj_item_ammo_shotgun</object>
+      <object>objects\obj_item_ammo_acid_gun</object>
     </objects>
   </objects>
   <rooms name="rooms">

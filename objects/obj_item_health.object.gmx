@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>active = true;
 timer = 0;
-image_speed = 0.1;
+image_speed = 0.05;
 </string>
           </argument>
         </arguments>

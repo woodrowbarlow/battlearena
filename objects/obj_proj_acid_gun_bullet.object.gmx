@@ -28,6 +28,7 @@
             <string>damage = 0.5;
 knockback = 0;
 timer = 0;
+fired_by = -1;
 </string>
           </argument>
         </arguments>
@@ -53,8 +54,9 @@ timer = 0;
             <string>if (hspeed == 0 &amp;&amp; vspeed == 0) {
     timer++;
 }
-
-vspeed += 0.1;
+else {
+    vspeed += 0.1;
+}
 
 if (timer &gt;= 10 * room_speed) {
     instance_destroy();
