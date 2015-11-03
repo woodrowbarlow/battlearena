@@ -111,9 +111,6 @@ while (argument0.weapon_ammos[argument0.weapon_held] == 0) {
 #define scr_perform_melee_attack
 ///scr_perform_melee_attack(character_instance_id)
 
-show_debug_message("player " + string(argument0.player_id) +
-    " performing melee attack");
-
 var damage = 8;
 var knockback = 0.2;
 var range = 0.5;
@@ -141,7 +138,7 @@ for (i = 0; i < instance_number(obj_characters_parent); i++) {
     if (enemy.x >= min_x && enemy.x <= max_x &&
         enemy.y >= min_y && enemy.y <= max_y) {
         
-        enemy.character_health -= damage;
+        enemy.character_health -= (1 - other.damage_reduction) * damage;
         enemy.x += sign(argument0.facing_direction) * G_GRID_SIZE * knockback;
         return 0;   // remove return if punches should go through multiple people
     }
@@ -151,11 +148,11 @@ for (i = 0; i < instance_number(obj_characters_parent); i++) {
 ///scr_shoot_auto_rifle(character_instance_id)
 
 // deduct one ammo.
-argument0.weapon_ammos[1] --;
+argument0.weapon_ammos[W_AUTO_RIFLE_ID] --;
 // spawn a bullet and set its speed.
 var bullet = instance_create(argument0.x, argument0.y,
     obj_proj_rifle_bullet);
-bullet.hspeed = 3 * argument0.facing_direction;
+bullet.hspeed = 5 * argument0.facing_direction;
 bullet.fired_by = argument0.player_id;
 
 #define scr_shoot_shotgun
@@ -163,17 +160,13 @@ bullet.fired_by = argument0.player_id;
 
 // shotgun uses 5 bullets per shot, so if the player
 // doesn't have at least that much ammo, terminate.
-if (argument0.weapon_ammos[2] < 5) {
+if (argument0.weapon_ammos[W_SHOTGUN_ID] < 5) {
     // this should be impossible since we give ammo packs in
     // multiples of 5, but we need to be sure.
     return 0;
 }
 // otherwise, go ahead and deduct the ammo.
-argument0.weapon_ammos[2] -= 5;
-show_debug_message("player " + string(argument0.player_id) +
-    " firing shotgun");
-show_debug_message("shotgun ammo remaining: " +
-    string(argument0.weapon_ammos[2]));
+argument0.weapon_ammos[W_SHOTGUN_ID] -= 5;
 // fired at 30 degree ascension
 var bullet = instance_create(argument0.x, argument0.y,
     obj_proj_shotgun_bullet);
@@ -210,7 +203,15 @@ bullet.fired_by = argument0.player_id;
 
 show_debug_message("player " + string(argument0.player_id) +
     " firing acid gun");
-show_debug_message("acid gun not yet implemented");
+
+// deduct one ammo.
+argument0.weapon_ammos[W_ACID_GUN_ID] --;
+// spawn a bullet and set its speed.
+var bullet = instance_create(argument0.x, argument0.y,
+    obj_proj_acid_gun_bullet);
+bullet.hspeed = 3 * argument0.facing_direction;
+bullet.vspeed = -2;
+bullet.fired_by = argument0.player_id;
 
 #define scr_shoot_seeker_rocket
 ///scr_shoot_seeker_rocket(character_instance_id)

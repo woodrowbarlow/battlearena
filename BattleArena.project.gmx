@@ -270,6 +270,7 @@
       </objects>
       <object>objects\obj_proj_rifle_bullet</object>
       <object>objects\obj_proj_shotgun_bullet</object>
+      <object>objects\obj_proj_acid_gun_bullet</object>
     </objects>
     <objects name="music">
       <objects name="arenas">
