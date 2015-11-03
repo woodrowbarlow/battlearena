@@ -159,6 +159,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
+    <font>fonts\fnt_tiny</font>
   </fonts>
   <objects name="objects">
     <objects name="characters">
@@ -273,6 +274,9 @@
       <object>objects\obj_proj_acid_gun_bullet</object>
     </objects>
     <objects name="music">
+      <objects name="parents">
+        <object>objects\obj_music_par_arenamusic</object>
+      </objects>
       <objects name="arenas">
         <object>objects\obj_music_arenas_knoll</object>
       </objects>

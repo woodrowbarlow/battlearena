@@ -17,6 +17,8 @@ for (i = 0; i < array_length_1d(argument0.weapon_timers); i++) {
 // this block handles switching weapons
 if (switch_weapon != 0) {
     argument0.weapon_held += switch_weapon;
+    if (argument0.weapon_held < 0)
+        argument0.weapon_held = array_length_1d(argument0.weapon_ammos) - 1;
     argument0.weapon_held %= array_length_1d(argument0.weapon_ammos);
     // if this gun is out of ammo, switch to the next one
     var orig_weapon = argument0.weapon_held;

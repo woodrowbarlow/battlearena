@@ -34,7 +34,7 @@ starting_hp = 100;
 
 character_names[0] = "Sallie the Salamander";
 character_names[1] = "Ruff the Rhinoceros";
-character_names[2] = "Aerie the Fey";
+character_names[2] = "Aerie the Canary";
 character_names[3] = "Penn the Penguin";
 character_objects[0] = obj_characters_sallie;
 character_objects[1] = obj_characters_ruff;
