@@ -291,6 +291,7 @@
       <object>objects\obj_menus_arenaselect</object>
       <object>objects\obj_menus_options</object>
       <object>objects\obj_menus_hud</object>
+      <object>objects\obj_menus_victory</object>
     </objects>
     <objects name="projectile">
       <objects name="parents">
@@ -324,6 +325,7 @@
       <room>rooms\rm_menus_characterselect</room>
       <room>rooms\rm_menus_arenaselect</room>
       <room>rooms\rm_menus_options</room>
+      <room>rooms\rm_menus_victory</room>
     </rooms>
     <rooms name="arenas">
       <room>rooms\rm_arenas_knoll</room>

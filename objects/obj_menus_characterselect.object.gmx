@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar number_of_players, selected_characters, starting_lives, starting_hp;
+            <string>globalvar number_of_players, selected_characters, starting_lives, starting_hp, victor;
 number_of_players = 2;
 selected_characters[0] = -1;
 selected_characters[1] = -1;
@@ -44,7 +44,7 @@ character_objects[3] = obj_characters_penn;
 player_selection[0] = 0;
 player_selection[1] = 0;
 
-
+victor = -1;
 </string>
           </argument>
         </arguments>
