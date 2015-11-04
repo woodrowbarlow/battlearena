@@ -36,6 +36,10 @@
           <sprite>sprites\spr_plat_fg_grass_narrow_bot</sprite>
           <sprite>sprites\spr_plat_fg_grass_tiny</sprite>
         </sprites>
+        <sprites name="space">
+          <sprite>sprites\spr_moon</sprite>
+          <sprite>sprites\spr_moon_wall</sprite>
+        </sprites>
       </sprites>
       <sprites name="background">
         <sprites name="grass">
@@ -61,6 +65,14 @@
           <sprite>sprites\spr_plat_bg_grass_narrow_mid</sprite>
           <sprite>sprites\spr_plat_bg_grass_narrow_bot</sprite>
           <sprite>sprites\spr_plat_bg_grass_tiny</sprite>
+        </sprites>
+        <sprites name="space">
+          <sprite>sprites\spr_space_wall_1</sprite>
+          <sprite>sprites\spr_space_wall_2</sprite>
+          <sprite>sprites\spr_space_wall_3</sprite>
+          <sprite>sprites\spr_space_wall_4</sprite>
+          <sprite>sprites\spr_space_halfwall</sprite>
+          <sprite>sprites\spr_space_space</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -150,7 +162,9 @@
       </sprites>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_keypressed.gml</script>
@@ -199,6 +213,10 @@
           <object>objects\obj_plat_fg_grass_narrow_bot</object>
           <object>objects\obj_plat_fg_grass_tiny</object>
         </objects>
+        <objects name="space">
+          <object>objects\obj_moon</object>
+          <object>objects\obj_moon_wall</object>
+        </objects>
       </objects>
       <objects name="background">
         <objects name="grass">
@@ -224,6 +242,13 @@
           <object>objects\obj_plat_bg_grass_narrow_mid</object>
           <object>objects\obj_plat_bg_grass_narrow_bot</object>
           <object>objects\obj_plat_bg_grass_tiny</object>
+        </objects>
+        <objects name="space">
+          <object>objects\obj_space_wall_1</object>
+          <object>objects\obj_space_wall_2</object>
+          <object>objects\obj_space_wall_3</object>
+          <object>objects\obj_space_wall_4</object>
+          <object>objects\obj_space_halfwall</object>
         </objects>
       </objects>
       <objects name="parents">
@@ -302,6 +327,7 @@
     </rooms>
     <rooms name="arenas">
       <room>rooms\rm_arenas_knoll</room>
+      <room>rooms\rm_arenas_moonbase</room>
     </rooms>
   </rooms>
   <help>
