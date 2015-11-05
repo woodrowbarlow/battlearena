@@ -118,6 +118,7 @@
     <instance objName="obj_moon_wall" x="416" y="384" name="inst_01E89499" locked="0" code="" scaleX="0.333333343267441" scaleY="0.333333343267441" colour="4294967295" rotation="0"/>
     <instance objName="obj_moon_wall" x="448" y="384" name="inst_6366FEE6" locked="0" code="" scaleX="0.333333343267441" scaleY="0.333333343267441" colour="4294967295" rotation="0"/>
     <instance objName="obj_moon_wall" x="480" y="384" name="inst_77EF49BC" locked="0" code="" scaleX="0.333333343267441" scaleY="0.333333343267441" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pln" x="160" y="288" name="inst_C06F38C9" locked="0" code="" scaleX="3" scaleY="3" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -40,6 +40,16 @@
           <sprite>sprites\spr_moon</sprite>
           <sprite>sprites\spr_moon_wall</sprite>
         </sprites>
+        <sprites name="snow">
+          <sprite>sprites\spr_snow_top</sprite>
+          <sprite>sprites\spr_snow_edge1</sprite>
+          <sprite>sprites\spr_snow_edge2</sprite>
+          <sprite>sprites\spr_snow_middle</sprite>
+          <sprite>sprites\spr_snow_slope1</sprite>
+          <sprite>sprites\spr_snow_slope2</sprite>
+          <sprite>sprites\spr_semi</sprite>
+          <sprite>sprites\spr_full</sprite>
+        </sprites>
       </sprites>
       <sprites name="background">
         <sprites name="grass">
@@ -108,6 +118,14 @@
         <sprite>sprites\spr_deco_elem_bridge_rslope_inner_mask</sprite>
         <sprite>sprites\spr_deco_elem_bridge_mid</sprite>
       </sprites>
+      <sprites name="space">
+        <sprite>sprites\spr_pln</sprite>
+      </sprites>
+      <sprites name="snow">
+        <sprite>sprites\spr_icicle</sprite>
+        <sprite>sprites\spr_ladder</sprite>
+        <sprite>sprites\spr_snowman</sprite>
+      </sprites>
     </sprites>
     <sprites name="characters">
       <sprites name="sallie">
@@ -164,6 +182,13 @@
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
+    <background>background\tile_snow_left</background>
+    <background>background\tile_snow_right</background>
+    <background>background\tile_snow_mid</background>
+    <background>background\tile_snow</background>
+    <background>background\tile_snowman</background>
+    <background>background\tile_snow_edge_right</background>
+    <background>background\tile_snow_edge_left</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -217,6 +242,7 @@
           <object>objects\obj_moon</object>
           <object>objects\obj_moon_wall</object>
         </objects>
+        <object>objects\obj_full</object>
       </objects>
       <objects name="background">
         <objects name="grass">
@@ -250,6 +276,11 @@
           <object>objects\obj_space_wall_4</object>
           <object>objects\obj_space_halfwall</object>
         </objects>
+        <objects name="snow">
+          <object>objects\obj_slope_left</object>
+          <object>objects\obj_slope_right</object>
+        </objects>
+        <object>objects\obj_half</object>
       </objects>
       <objects name="parents">
         <object>objects\obj_plat_par_solid</object>
@@ -283,6 +314,13 @@
         <object>objects\obj_deco_elem_bridge_rslope_outer</object>
         <object>objects\obj_deco_elem_bridge_rslope_inner</object>
         <object>objects\obj_deco_elem_bridge_mid</object>
+      </objects>
+      <objects name="space">
+        <object>objects\obj_pln</object>
+      </objects>
+      <objects name="snow">
+        <object>objects\obj_icicle</object>
+        <object>objects\obj_ladderSnow</object>
       </objects>
     </objects>
     <objects name="menus">
@@ -330,6 +368,7 @@
     <rooms name="arenas">
       <room>rooms\rm_arenas_knoll</room>
       <room>rooms\rm_arenas_moonbase</room>
+      <room>rooms\rm_arenas_ice</room>
     </rooms>
   </rooms>
   <help>
