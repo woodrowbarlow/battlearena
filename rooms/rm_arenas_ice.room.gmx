@@ -139,6 +139,7 @@
     <instance objName="obj_half" x="416" y="224" name="inst_6929CCA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_half" x="448" y="224" name="inst_7B06645D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_half" x="480" y="224" name="inst_9D359D68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_music_arenas_ice" x="0" y="0" name="inst_0F783A85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tile_snow" x="160" y="192" w="32" h="32" xo="0" yo="0" id="10000193" name="inst_6149897E" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

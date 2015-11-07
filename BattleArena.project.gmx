@@ -7,6 +7,11 @@
   <sounds name="sound">
     <sounds name="arenas">
       <sound>sound\snd_arenas_knoll</sound>
+      <sound>sound\snd_arenas_knoll2</sound>
+      <sound>sound\snd_arenas_ice</sound>
+      <sound>sound\snd_menu_bgm</sound>
+      <sound>sound\snd_arenas_moon</sound>
+      <sound>sound\snd_arenas_temple</sound>
     </sounds>
     <sounds name="sound effects">
       <sound>sound\snd_death</sound>
@@ -23,7 +28,7 @@
       <sound>sound\snd_shoot2</sound>
       <sound>sound\snd_shotgun</sound>
       <sound>sound\snd_rhino</sound>
-      <sound>sound\snd_salami</sound>
+      <sound>sound\snd_teleport</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -66,6 +71,13 @@
           <sprite>sprites\spr_snow_slope2</sprite>
           <sprite>sprites\spr_semi</sprite>
           <sprite>sprites\spr_full</sprite>
+        </sprites>
+        <sprites name="temple">
+          <sprite>sprites\spr_bricks1</sprite>
+          <sprite>sprites\spr_bricks2</sprite>
+          <sprite>sprites\spr_bricks2_old</sprite>
+          <sprite>sprites\spr_bricks2_color</sprite>
+          <sprite>sprites\spr_arch_small</sprite>
         </sprites>
       </sprites>
       <sprites name="background">
@@ -143,6 +155,9 @@
         <sprite>sprites\spr_ladder</sprite>
         <sprite>sprites\spr_snowman</sprite>
       </sprites>
+      <sprites name="temple">
+        <sprite>sprites\spr_ladder_temple</sprite>
+      </sprites>
     </sprites>
     <sprites name="characters">
       <sprites name="sallie">
@@ -206,6 +221,33 @@
     <background>background\tile_snowman</background>
     <background>background\tile_snow_edge_right</background>
     <background>background\tile_snow_edge_left</background>
+    <backgrounds name="temple">
+      <background>background\tile_bricks1</background>
+      <background>background\tile_bricks2</background>
+      <background>background\tile_bricks2_color</background>
+      <background>background\tile_bricks2_old</background>
+      <background>background\tile_arch_small</background>
+      <background>background\tile_bricks3</background>
+      <background>background\tile_bricks3_small</background>
+      <background>background\tile_arch_big</background>
+      <background>background\tile_bigbricks</background>
+      <background>background\tile_bigbricks_old</background>
+      <background>background\tile_bigbricks_color</background>
+      <background>background\tile_bigbricks_color_old</background>
+      <background>background\tile_roof</background>
+      <background>background\tile_black</background>
+      <background>background\tile_black_old</background>
+      <background>background\tile_blackcurve</background>
+      <background>background\tile_blackcurve_old</background>
+      <background>background\tile_treasure1</background>
+      <background>background\tile_treasure2</background>
+      <background>background\tile_pot1</background>
+      <background>background\tile_pot2</background>
+      <background>background\tile_pillar1</background>
+      <background>background\tile_pillar2</background>
+      <background>background\tile_pillar3</background>
+      <background>background\tile_cloud_temple</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -339,6 +381,7 @@
         <object>objects\obj_icicle</object>
         <object>objects\obj_ladderSnow</object>
       </objects>
+      <object>objects\obj_ladder_temple</object>
     </objects>
     <objects name="menus">
       <object>objects\obj_menus_splash</object>
@@ -362,6 +405,10 @@
       </objects>
       <objects name="arenas">
         <object>objects\obj_music_arenas_knoll</object>
+        <object>objects\obj_music_arenas_knoll2</object>
+        <object>objects\obj_music_arenas_ice</object>
+        <object>objects\obj_music_arenas_temple</object>
+        <object>objects\obj_music_arenas_moon</object>
       </objects>
     </objects>
     <objects name="items">
@@ -386,6 +433,7 @@
       <room>rooms\rm_arenas_knoll</room>
       <room>rooms\rm_arenas_moonbase</room>
       <room>rooms\rm_arenas_ice</room>
+      <room>rooms\rm_arenas_temple</room>
     </rooms>
   </rooms>
   <help>
