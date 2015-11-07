@@ -8,6 +8,23 @@
     <sounds name="arenas">
       <sound>sound\snd_arenas_knoll</sound>
     </sounds>
+    <sounds name="sound effects">
+      <sound>sound\snd_death</sound>
+      <sound>sound\snd_dive</sound>
+      <sound>sound\snd_hit</sound>
+      <sound>sound\snd_ice1</sound>
+      <sound>sound\snd_ice2</sound>
+      <sound>sound\snd_ice3</sound>
+      <sound>sound\snd_jump</sound>
+      <sound>sound\snd_menu</sound>
+      <sound>sound\snd_ooze</sound>
+      <sound>sound\snd_kakaka</sound>
+      <sound>sound\snd_shoot1</sound>
+      <sound>sound\snd_shoot2</sound>
+      <sound>sound\snd_shotgun</sound>
+      <sound>sound\snd_rhino</sound>
+      <sound>sound\snd_salami</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprites name="platforms">
