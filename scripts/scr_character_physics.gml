@@ -41,6 +41,7 @@ if (place_meeting(argument0.x,argument0.y+1,obj_plat_par_solid)
     if (jump > 0) {
         // for y-axis, positive is down and negative is up
         argument0.delta_y = -max_jump_height;
+        audio_play_sound(snd_jump, 1, false);
     }
     argument0.airjumps_remaining = argument0.airjump_limit;
 }
@@ -49,6 +50,7 @@ if (place_meeting(argument0.x,argument0.y+1,obj_plat_par_solid)
 else {
     if (jump && argument0.airjumps_remaining > 0) {
         argument0.delta_y = -max_jump_height * argument0.airjump_height;
+        audio_play_sound(snd_jump, 1, false);
         argument0.airjumps_remaining --;
     }
     // you can't control movement in mid-air as well

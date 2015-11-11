@@ -48,7 +48,7 @@ for (i = 0; i &lt; number_of_players; i++) {
     inst_ids[i].weapon_timers[4] = 0;
 }
 
-hud = instance_create(0, 0, obj_menus_hud);
+hud = instance_create(0, 0, obj_menus_hudice);
 hud.player1_inst_id = inst_ids[0];
 hud.player2_inst_id = inst_ids[1];</code>
   <enableViews>0</enableViews>
@@ -91,11 +91,6 @@ hud.player2_inst_id = inst_ids[1];</code>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_ladderSnow" x="448" y="256" name="inst_B4CB59F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ladderSnow" x="448" y="288" name="inst_51F72EE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ladderSnow" x="448" y="320" name="inst_3701D652" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ladderSnow" x="448" y="352" name="inst_24843F2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_ladderSnow" x="448" y="224" name="inst_5E56FF73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_icicle" x="224" y="352" name="inst_62D0555B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_icicle" x="320" y="352" name="inst_95F19EC5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_icicle" x="224" y="352" name="inst_8A1C4B89" locked="0" code="" scaleX="-1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -175,12 +170,17 @@ hud.player2_inst_id = inst_ids[1];</code>
     <instance objName="obj_half" x="288" y="256" name="inst_E05BBFC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_half" x="320" y="256" name="inst_5AA7C9FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_half" x="416" y="224" name="inst_6929CCA9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_half" x="448" y="224" name="inst_7B06645D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_half" x="480" y="224" name="inst_9D359D68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_music_arenas_ice" x="0" y="0" name="inst_0F783A85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_escape" x="32" y="0" name="inst_86361107" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_half" x="352" y="256" name="inst_985BC345" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_half" x="384" y="224" name="inst_2FC35E5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_ladder" x="448" y="352" name="inst_56D31E85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_ladder" x="448" y="320" name="inst_59CF13D8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_ladder" x="448" y="288" name="inst_994DEF56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_ladder" x="448" y="256" name="inst_145240A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_deco_elem_ladder" x="448" y="224" name="inst_AB954CB3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_half" x="448" y="224" name="inst_47EEB199" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tile_snow" x="160" y="192" w="32" h="32" xo="0" yo="0" id="10000193" name="inst_6149897E" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

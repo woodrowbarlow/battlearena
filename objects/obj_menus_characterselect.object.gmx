@@ -49,6 +49,30 @@ victor = -1;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>snd_menu_bgm</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -71,6 +95,12 @@ victor = -1;
 for(i=0; i&lt;number_of_players; i++) {
     if(selected_characters[i] &lt; 0) {
         dir = scr_pressed_right(i, false) - scr_pressed_left(i, false);
+        if (dir) {
+            audio_play_sound(snd_menu, 1, false);
+        }
+        if (-dir) {
+            audio_play_sound(snd_menu, 1, false);
+        }
         player_selection[i] += dir;
         if(player_selection[i] &lt; 0) {
             player_selection[i] = array_length_1d(character_objects) - 1;
@@ -80,6 +110,7 @@ for(i=0; i&lt;number_of_players; i++) {
         }
     }
     if(scr_pressed_start(i, false) || scr_pressed_primary(i, false)) {
+        audio_play_sound(snd_menu, 1, false);
         selected_characters[i] = character_objects[player_selection[i]];
     }
 }

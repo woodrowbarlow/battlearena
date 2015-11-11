@@ -59,6 +59,7 @@
 active = false;
 
 other.weapon_ammos[weapon_id] += ammo_given;
+audio_play_sound(snd_dive, 10, false);
 </string>
           </argument>
         </arguments>

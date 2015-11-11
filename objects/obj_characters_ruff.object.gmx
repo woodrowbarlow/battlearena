@@ -29,7 +29,7 @@
 
 // character stats
 jump_height                         = 1.00; // percent
-move_speed                          = 0.75; // percent
+move_speed                          = 0.85; // percent
 damage_reduction                    = 0.25; // percent
 special_cooldown                    = 10;   // seconds
 airjump_limit                       = 0;    // number

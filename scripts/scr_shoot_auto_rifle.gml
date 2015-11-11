@@ -1,4 +1,6 @@
 #define scr_character_weapon_use
+///scr_character_weapon_use(character_instance_id)
+
 var switch_weapon = scr_pressed_next_weapon(argument0.player_id, false) - 
     scr_pressed_prev_weapon(argument0.player_id, false);
 var pressed_attack = scr_pressed_fire(argument0.player_id, false);
@@ -124,10 +126,12 @@ max_y = argument0.y + argument0.sprite_height / 2;
 if (argument0.facing_direction > 0) {
     min_x = argument0.x;
     max_x = argument0.x + range * G_GRID_SIZE;
+    audio_play_sound(snd_shoot1, 1, false);
 }
 else {
     min_x = argument0.x - range * G_GRID_SIZE;
     max_x = argument0.x;
+    audio_play_sound(snd_shoot1, 1, false);
 }
 
 for (i = 0; i < instance_number(obj_characters_parent); i++) {
@@ -137,7 +141,7 @@ for (i = 0; i < instance_number(obj_characters_parent); i++) {
     // if the enemy is within the hitbox, they get hit
     if (enemy.x >= min_x && enemy.x <= max_x &&
         enemy.y >= min_y && enemy.y <= max_y) {
-        
+        audio_play_sound(snd_shoot1, 1, false);
         enemy.character_health -= (1 - other.damage_reduction) * damage;
         enemy.x += sign(argument0.facing_direction) * G_GRID_SIZE * knockback;
         return 0;   // remove return if punches should go through multiple people
@@ -145,6 +149,8 @@ for (i = 0; i < instance_number(obj_characters_parent); i++) {
 }
 
 #define scr_shoot_auto_rifle
+///scr_shoot_auto_rifle(character_instance_id)
+
 // deduct one ammo.
 argument0.weapon_ammos[W_AUTO_RIFLE_ID] --;
 // spawn a bullet and set its speed.
@@ -152,24 +158,10 @@ var bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_rifle_bullet);
 bullet.hspeed = 12 * argument0.facing_direction;
 bullet.fired_by = argument0.player_id;
-
-
-
-#define scr_shoot_acid_gun
-show_debug_message("player " + string(argument0.player_id) +
-    " firing acid gun");
-
-// deduct one ammo.
-argument0.weapon_ammos[W_ACID_GUN_ID] --;
-// spawn a bullet and set its speed.
-var bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
-    argument0.y-8, obj_proj_acid_gun_bullet);
-bullet.hspeed = 2 * argument0.facing_direction;
-bullet.vspeed = -2;
-
-
+audio_play_sound(snd_shoot2, 1, false);
 
 #define scr_shoot_shotgun
+///scr_shoot_shotgun(character_instance_id)
 
 // shotgun uses 5 bullets per shot, so if the player
 // doesn't have at least that much ammo, terminate.
@@ -210,9 +202,26 @@ bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
 bullet.hspeed = 7.72 * argument0.facing_direction;
 bullet.vspeed = 2.07;
 bullet.fired_by = argument0.player_id;
+audio_play_sound(snd_shotgun, 1, false);
 
+#define scr_shoot_acid_gun
+///scr_shoot_acid_gun(character_instance_id)
+
+show_debug_message("player " + string(argument0.player_id) +
+    "firing acid gun");
+
+// deduct one ammo.
+argument0.weapon_ammos[W_ACID_GUN_ID] --;
+// spawn a bullet and set its speed.
+var bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
+    argument0.y-8, obj_proj_acid_gun_bullet);
+bullet.hspeed = 2 * argument0.facing_direction;
+bullet.vspeed = -2;
+audio_play_sound(snd_ooze, 1, false);
 
 #define scr_shoot_seeker_rocket
+///scr_shoot_seeker_rocket(character_instance_id)
+
 show_debug_message("player " + string(argument0.player_id) +
     " firing seeker rocket");
 show_debug_message("seeker rocket not yet implemented");

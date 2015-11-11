@@ -197,6 +197,7 @@
       </sprites>
       <sprite>sprites\spr_item_rifle_bullet</sprite>
       <sprite>sprites\spr_item_health</sprite>
+      <sprite>sprites\spr_acid</sprite>
     </sprites>
     <sprites name="menus">
       <sprites name="hud">
@@ -390,6 +391,8 @@
       <object>objects\obj_menus_options</object>
       <object>objects\obj_menus_hud</object>
       <object>objects\obj_menus_victory</object>
+      <object>objects\obj_menus_hudice</object>
+      <object>objects\obj_menus_hudtemp</object>
     </objects>
     <objects name="projectile">
       <objects name="parents">

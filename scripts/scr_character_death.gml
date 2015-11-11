@@ -2,6 +2,7 @@
 
 if (argument0.y >= 1.25 * view_hview[0] || argument0.character_health <= 0) {
     argument0.character_lives --;
+    audio_play_sound(snd_death, 1, false);
     if (argument0.character_lives > 0) {
         argument0.character_health = starting_hp;
         argument0.x = argument0.spawn_coords[0];
