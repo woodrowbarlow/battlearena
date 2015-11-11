@@ -28,7 +28,6 @@
       <sound>sound\snd_shoot2</sound>
       <sound>sound\snd_shotgun</sound>
       <sound>sound\snd_rhino</sound>
-      <sound>sound\snd_teleport</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -425,6 +424,9 @@
     </objects>
     <object>objects\obj_escape</object>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\timeline1</timeline>
+  </timelines>
   <rooms name="rooms">
     <rooms name="menus">
       <room>rooms\rm_menus_splash</room>

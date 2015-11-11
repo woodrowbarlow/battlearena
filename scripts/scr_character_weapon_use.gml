@@ -124,10 +124,12 @@ max_y = argument0.y + argument0.sprite_height / 2;
 if (argument0.facing_direction > 0) {
     min_x = argument0.x;
     max_x = argument0.x + range * G_GRID_SIZE;
+    audio_play_sound(snd_shoot1, 1, false);
 }
 else {
     min_x = argument0.x - range * G_GRID_SIZE;
     max_x = argument0.x;
+    audio_play_sound(snd_shoot1, 1, false);
 }
 
 for (i = 0; i < instance_number(obj_characters_parent); i++) {
@@ -152,6 +154,7 @@ var bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_rifle_bullet);
 bullet.hspeed = 12 * argument0.facing_direction;
 bullet.fired_by = argument0.player_id;
+audio_play_sound(snd_shoot2, 1, false);
 
 
 
@@ -166,6 +169,7 @@ var bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y-8, obj_proj_acid_gun_bullet);
 bullet.hspeed = 2 * argument0.facing_direction;
 bullet.vspeed = -2;
+audio_play_sound(snd_ooze, 1, false);
 
 
 
@@ -210,6 +214,7 @@ bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
 bullet.hspeed = 7.72 * argument0.facing_direction;
 bullet.vspeed = 2.07;
 bullet.fired_by = argument0.player_id;
+audio_play_sound(snd_shotgun, 1, false);
 
 
 #define scr_shoot_seeker_rocket
