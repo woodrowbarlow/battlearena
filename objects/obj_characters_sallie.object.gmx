@@ -36,6 +36,9 @@ special_cooldown                    = 2;    // seconds
 airjump_limit                       = 0;    // number
 airjump_height                      = 0.50; // percent
 
+// sallie's special ability
+teleport_distance                   = 3     // blocks
+
 // weapon information
 weapon_held = 0;
 weapon_ammos[W_MELEE_ID]            = DEFAULT_STARTING_AMMO_MELEE;

@@ -11,6 +11,9 @@ for (i = 0; i < array_length_1d(argument0.weapon_timers); i++) {
         argument0.weapon_timers[i]--;
     }
 }
+if (argument0.special_timer > 0) {
+    argument0.special_timer --;
+}
 
 // this block handles switching weapons
 if (switch_weapon != 0) {
@@ -110,7 +113,8 @@ while (argument0.weapon_ammos[argument0.weapon_held] == 0) {
 
 // this block handles activating the special attack / ability
 // it checks to see which character you are then calls the appropriate script
-if (pressed_special > 0) {
+if (pressed_special > 0 && argument0.special_timer <= 0) {
+    argument0.special_timer = special_cooldown * room_speed;
     switch (argument0.character_id) {
     case CHARACTER_ID_SALLIE:
         scr_perform_special_sallie(argument0);
@@ -124,11 +128,13 @@ if (pressed_special > 0) {
     case CHARACTER_ID_PENN:
         scr_perform_special_penn(argument0);
         break;
+    // error state
     default:
         // this shouldn't be possible unless a character has been added
         // but wasn't added here. log the error.
         show_debug_message("player " + string(argument0.player_id) +
-            " character is invalid");
+            " character_id constant is unexpected (=" +
+            string(argument0.weapon_held) + ")");
     }
 }
 
@@ -246,9 +252,27 @@ show_debug_message("player " + string(argument0.player_id) +
     " firing seeker rocket");
 show_debug_message("seeker rocket not yet implemented");
 #define scr_perform_special_sallie
-show_debug_message("player " + string(argument0.player_id) +
-    "performing sallie's special");
-show_debug_message("sallie's special not yet implemented");
+var dx = argument0.teleport_distance * G_GRID_SIZE
+    * sign(argument0.facing_direction);
+var dy = 0;
+
+if (scr_pressed_up(argument0.player_id, true)) {
+    dy = argument0.teleport_distance * G_GRID_SIZE / 3;
+}
+
+if (!scr_pressed_left(argument0.player_id, true)
+    && !scr_pressed_right(argument0.player_id, true)) {
+    if (scr_pressed_up(argument0.player_id, true)) {
+        dx = 0;
+        dy *= 3;
+    }
+    else {
+        argument0.facing_direction *= -1;
+    }
+}
+
+argument0.x += dx;
+argument0.y -= dy;
 
 #define scr_perform_special_ruff
 show_debug_message("player " + string(argument0.player_id) +
