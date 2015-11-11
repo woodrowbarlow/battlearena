@@ -32,10 +32,10 @@ selected_characters[1] = -1;
 starting_lives = 5;
 starting_hp = 100;
 
-character_names[0] = "Sallie the Salamander";
-character_names[1] = "Ruff the Rhinoceros";
-character_names[2] = "Aerie the Canary";
-character_names[3] = "Penn the Penguin";
+character_names[0] = "Blue Jake";
+character_names[1] = "Violet Wendy";
+character_names[2] = "Red Scooter";
+character_names[3] = "Green Kevin";
 character_objects[0] = obj_characters_sallie;
 character_objects[1] = obj_characters_ruff;
 character_objects[2] = obj_characters_aerie;

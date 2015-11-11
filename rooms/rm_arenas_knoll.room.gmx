@@ -300,6 +300,8 @@ hud.player2_inst_id = inst_ids[1];</code>
     <instance objName="obj_item_ammo_shotgun" x="320" y="320" name="inst_8F77D63E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_item_ammo_acid_gun" x="512" y="160" name="inst_E0AFD8FD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_music_arenas_knoll2" x="0" y="0" name="inst_06323ED1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_escape" x="32" y="0" name="inst_882166AC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_half" x="384" y="64" name="inst_24970064" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

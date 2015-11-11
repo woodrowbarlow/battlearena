@@ -154,7 +154,7 @@ argument0.weapon_ammos[W_AUTO_RIFLE_ID] --;
 // spawn a bullet and set its speed.
 var bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_rifle_bullet);
-bullet.hspeed = 8 * argument0.facing_direction;
+bullet.hspeed = 12 * argument0.facing_direction;
 bullet.fired_by = argument0.player_id;
 
 #define scr_shoot_shotgun
@@ -169,35 +169,35 @@ if (argument0.weapon_ammos[W_SHOTGUN_ID] < 5) {
 }
 // otherwise, go ahead and deduct the ammo.
 argument0.weapon_ammos[W_SHOTGUN_ID] -= 5;
-// fired at 30 degree ascension
+// fired at 15 degree ascension
 var bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_shotgun_bullet);
-bullet.hspeed = 2.6 * argument0.facing_direction;
-bullet.vspeed = -1.5;
+bullet.hspeed = 7.72 * argument0.facing_direction;
+bullet.vspeed = -2.07;
 bullet.fired_by = argument0.player_id;
-// fired at 15 degree ascension
+// fired at 7.5 degree ascension
 bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_shotgun_bullet);
-bullet.hspeed = 2.9 * argument0.facing_direction;
-bullet.vspeed = -0.78;
+bullet.hspeed = 7.93 * argument0.facing_direction;
+bullet.vspeed = -1.044;
 bullet.fired_by = argument0.player_id;
 // fired at level
 bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_shotgun_bullet);
-bullet.hspeed = 3 * argument0.facing_direction;
+bullet.hspeed = 8 * argument0.facing_direction;
 bullet.vspeed = 0;
+bullet.fired_by = argument0.player_id;
+// fired at 7.5 degree descension
+bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
+    argument0.y - 8, obj_proj_shotgun_bullet);
+bullet.hspeed = 7.93 * argument0.facing_direction;
+bullet.vspeed = 1.044;
 bullet.fired_by = argument0.player_id;
 // fired at 15 degree descension
 bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_shotgun_bullet);
-bullet.hspeed = 2.9 * argument0.facing_direction;
-bullet.vspeed = 0.78;
-bullet.fired_by = argument0.player_id;
-// fired at 30 degree descension
-bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
-    argument0.y - 8, obj_proj_shotgun_bullet);
-bullet.hspeed = 2.6 * argument0.facing_direction;
-bullet.vspeed = 1.5;
+bullet.hspeed = 7.72 * argument0.facing_direction;
+bullet.vspeed = 2.07;
 bullet.fired_by = argument0.player_id;
 
 #define scr_shoot_acid_gun
@@ -211,7 +211,7 @@ argument0.weapon_ammos[W_ACID_GUN_ID] --;
 // spawn a bullet and set its speed.
 var bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y-8, obj_proj_acid_gun_bullet);
-bullet.hspeed = 3 * argument0.facing_direction;
+bullet.hspeed = 2 * argument0.facing_direction;
 bullet.vspeed = -2;
 
 #define scr_shoot_seeker_rocket

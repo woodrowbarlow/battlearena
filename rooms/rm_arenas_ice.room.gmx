@@ -8,9 +8,49 @@
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
-  <colour>16744448</colour>
+  <colour>16758380</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>spawn_locations[0,0] = 128;
+spawn_locations[0,1] = 352;
+spawn_locations[1,0] = 512;
+spawn_locations[1,1] = 352;
+spawn_locations[2,0] = 556;
+spawn_locations[2,1] = 160;
+spawn_locations[3,0] = 208;
+spawn_locations[3,1] = 32;
+arena_gravity = 1;
+
+var i,j,inst_ids, hud;
+inst_ids[0] = 0;
+inst_ids[1] = 0;
+for (i = 0; i &lt; number_of_players; i++) {
+    inst_ids[i] = instance_create(
+        spawn_locations[i,0], spawn_locations[i,1],
+        selected_characters[i]
+        );
+    inst_ids[i].character_instance_id = inst_ids[i];
+    inst_ids[i].player_id = i;
+    inst_ids[i].arena_gravity = arena_gravity;
+    inst_ids[i].airjumps_remaining = inst_ids[i].airjump_limit;
+    inst_ids[i].on_ladder = false;
+    inst_ids[i].character_health = starting_hp;
+    inst_ids[i].character_lives = starting_lives;
+    inst_ids[i].spawn_coords[0] = spawn_locations[i,0];
+    inst_ids[i].spawn_coords[1] = spawn_locations[i,1];
+    inst_ids[i].delta_x = 0;
+    inst_ids[i].delta_y = 0;
+    if(i % 2 == 0) inst_ids[i].facing_direction = 1;
+    else inst_ids[i].facing_direction = -1;
+    inst_ids[i].weapon_timers[0] = 0;
+    inst_ids[i].weapon_timers[1] = 0;
+    inst_ids[i].weapon_timers[2] = 0;
+    inst_ids[i].weapon_timers[3] = 0;
+    inst_ids[i].weapon_timers[4] = 0;
+}
+
+hud = instance_create(0, 0, obj_menus_hud);
+hud.player1_inst_id = inst_ids[0];
+hud.player2_inst_id = inst_ids[1];</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -51,8 +91,6 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_slope_left" x="352" y="224" name="inst_0E17F18C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_characters_penn" x="434" y="209" name="inst_3D2E4E85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ladderSnow" x="448" y="256" name="inst_B4CB59F3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ladderSnow" x="448" y="288" name="inst_51F72EE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_ladderSnow" x="448" y="320" name="inst_3701D652" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -140,6 +178,9 @@
     <instance objName="obj_half" x="448" y="224" name="inst_7B06645D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_half" x="480" y="224" name="inst_9D359D68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_music_arenas_ice" x="0" y="0" name="inst_0F783A85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_escape" x="32" y="0" name="inst_86361107" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_half" x="352" y="256" name="inst_985BC345" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_half" x="384" y="224" name="inst_2FC35E5A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tile_snow" x="160" y="192" w="32" h="32" xo="0" yo="0" id="10000193" name="inst_6149897E" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -174,6 +215,7 @@
     <tile bgName="tile_snow_mid" x="224" y="160" w="32" h="32" xo="0" yo="0" id="10000236" name="inst_6212FE97" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snow_mid" x="256" y="160" w="32" h="32" xo="0" yo="0" id="10000237" name="inst_1ED013D8" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snow" x="128" y="288" w="32" h="32" xo="0" yo="0" id="10000251" name="inst_DDC10DDE" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tile_snow_left" x="384" y="224" w="32" h="32" xo="0" yo="0" id="10000580" name="inst_C8201390" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snow_right" x="544" y="384" w="32" h="32" xo="0" yo="0" id="10000002" name="inst_BF3CDF01" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snow_mid" x="128" y="384" w="32" h="32" xo="0" yo="0" id="10000003" name="inst_23280BCC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snow_mid" x="160" y="384" w="32" h="32" xo="0" yo="0" id="10000005" name="inst_C6B3A85B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -264,7 +306,6 @@
     <tile bgName="tile_snow_mid" x="416" y="224" w="32" h="32" xo="0" yo="0" id="10000151" name="inst_5E323ECE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snow_mid" x="448" y="224" w="32" h="32" xo="0" yo="0" id="10000152" name="inst_54FA0E87" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snow_right" x="480" y="224" w="32" h="32" xo="0" yo="0" id="10000153" name="inst_8D42C435" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="tile_snow" x="352" y="256" w="32" h="32" xo="0" yo="0" id="10000154" name="inst_02C95901" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snow" x="384" y="256" w="32" h="32" xo="0" yo="0" id="10000155" name="inst_EAD8BF32" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snow" x="320" y="352" w="32" h="32" xo="0" yo="0" id="10000160" name="inst_0D532C3E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snow" x="96" y="384" w="32" h="32" xo="0" yo="0" id="10000168" name="inst_8A5A6405" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -295,6 +336,7 @@
     <tile bgName="tile_snow_edge_right" x="544" y="448" w="32" h="32" xo="0" yo="0" id="10000266" name="inst_3F80ADDE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snow_edge_right" x="544" y="480" w="32" h="32" xo="0" yo="0" id="10000267" name="inst_E435B056" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snowman" x="192" y="96" w="32" h="64" xo="0" yo="0" id="10000268" name="inst_A74F87F0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="tile_snow_mid" x="352" y="256" w="32" h="32" xo="0" yo="0" id="10000582" name="inst_2BCCA181" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="tile_snow_left" x="96" y="384" w="32" h="32" xo="0" yo="0" id="10000169" name="inst_DADBC8E9" depth="999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>

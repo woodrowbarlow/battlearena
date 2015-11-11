@@ -420,6 +420,7 @@
       <object>objects\obj_item_ammo_shotgun</object>
       <object>objects\obj_item_ammo_acid_gun</object>
     </objects>
+    <object>objects\obj_escape</object>
   </objects>
   <rooms name="rooms">
     <rooms name="menus">
