@@ -29,6 +29,8 @@
 knockback = 0;
 timer = 0;
 fired_by = -1;
+
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -58,33 +60,9 @@ else {
     vspeed += 0.1;
 }
 
-if (timer &gt;= 10 * room_speed) {
+if (timer &gt;= 6 * room_speed) {
     instance_destroy();
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_plat_par_semisolid">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>hspeed = 0;
-vspeed = 0;
 </string>
           </argument>
         </arguments>
@@ -107,8 +85,13 @@ vspeed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>hspeed = 0;
+            <string>if (hspeed == 0)
+    return 0;
+
+hspeed = 0;
 vspeed = 0;
+image_index = 1;
+image_speed = 0.02;
 </string>
           </argument>
         </arguments>
