@@ -108,6 +108,30 @@ while (argument0.weapon_ammos[argument0.weapon_held] == 0) {
     }
 }
 
+// this block handles activating the special attack / ability
+// it checks to see which character you are then calls the appropriate script
+if (pressed_special > 0) {
+    switch (argument0.character_id) {
+    case CHARACTER_ID_SALLIE:
+        scr_perform_special_sallie(argument0);
+        break;
+    case CHARACTER_ID_RUFF:
+        scr_perform_special_ruff(argument0);
+        break;
+    case CHARACTER_ID_AERIE:
+        scr_perform_special_aerie(argument0);
+        break;
+    case CHARACTER_ID_PENN:
+        scr_perform_special_penn(argument0);
+        break;
+    default:
+        // this shouldn't be possible unless a character has been added
+        // but wasn't added here. log the error.
+        show_debug_message("player " + string(argument0.player_id) +
+            " character is invalid");
+    }
+}
+
 #define scr_perform_melee_attack
 ///scr_perform_melee_attack(character_instance_id)
 
@@ -221,3 +245,22 @@ audio_play_sound(snd_shotgun, 1, false);
 show_debug_message("player " + string(argument0.player_id) +
     " firing seeker rocket");
 show_debug_message("seeker rocket not yet implemented");
+#define scr_perform_special_sallie
+show_debug_message("player " + string(argument0.player_id) +
+    "performing sallie's special");
+show_debug_message("sallie's special not yet implemented");
+
+#define scr_perform_special_ruff
+show_debug_message("player " + string(argument0.player_id) +
+    "performing ruff's special");
+show_debug_message("ruff's special not yet implemented");
+
+#define scr_perform_special_aerie
+show_debug_message("player " + string(argument0.player_id) +
+    "performing aerie's special");
+show_debug_message("aerie's special not yet implemented");
+
+#define scr_perform_special_penn
+show_debug_message("player " + string(argument0.player_id) +
+    "performing penn's special");
+show_debug_message("penn's special not yet implemented");

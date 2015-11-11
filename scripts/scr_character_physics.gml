@@ -33,7 +33,7 @@ if (place_meeting(argument0.x,argument0.y+1,obj_plat_par_solid)
     // move_speed is a signed float from -1 to 1 indicating magnitude and direction
     argument0.delta_x = max_move_speed * move_horiz;
     argument0.delta_y = 0;
-    if (place_meeting(argument0.x,argument0.y,obj_deco_elem_ladder) && move_vert <= 0.7) {
+    if (place_meeting(argument0.x,argument0.y,obj_deco_elem_ladder) && move_vert <= -0.7) {
         argument0.on_ladder = true;
         return 0;
     }

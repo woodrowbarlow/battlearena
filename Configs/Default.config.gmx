@@ -457,13 +457,17 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="16">
+    <constants number="20">
       <constant name="G_GRID_SIZE">32</constant>
       <constant name="W_MELEE_ID">0</constant>
       <constant name="W_AUTO_RIFLE_ID">1</constant>
       <constant name="W_SHOTGUN_ID">2</constant>
       <constant name="W_ACID_GUN_ID">3</constant>
       <constant name="W_SEEKER_ROCKET_ID">4</constant>
+      <constant name="CHARACTER_ID_SALLIE">0</constant>
+      <constant name="CHARACTER_ID_RUFF">1</constant>
+      <constant name="CHARACTER_ID_AERIE">2</constant>
+      <constant name="CHARACTER_ID_PENN">3</constant>
       <constant name="DEFAULT_STARTING_AMMO_MELEE">-1</constant>
       <constant name="DEFAULT_STARTING_AMMO_AUTO_RIFLE">75</constant>
       <constant name="DEFAULT_STARTING_AMMO_SHOTGUN">35</constant>

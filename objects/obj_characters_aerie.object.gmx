@@ -28,6 +28,7 @@
             <string>/// Initialize Variables
 
 // character stats
+character_id                        = CHARACTER_ID_AERIE;
 jump_height                         = 0.75; // percent
 move_speed                          = 1.00; // percent
 damage_reduction                    = -.25; // percent

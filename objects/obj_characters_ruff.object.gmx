@@ -28,6 +28,7 @@
             <string>/// Initialize Variables
 
 // character stats
+character_id                        = CHARACTER_ID_RUFF;
 jump_height                         = 1.00; // percent
 move_speed                          = 0.85; // percent
 damage_reduction                    = 0.25; // percent

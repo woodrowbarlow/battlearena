@@ -28,6 +28,7 @@
             <string>/// Initialize Variables
 
 // character stats
+character_id                        = CHARACTER_ID_SALLIE;
 jump_height                         = 1.00; // percent
 move_speed                          = 1.25; // percent
 damage_reduction                    = 0.00; // percent
