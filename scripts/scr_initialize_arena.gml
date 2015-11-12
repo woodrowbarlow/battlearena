@@ -32,5 +32,5 @@ for (i = 0; i < number_of_players; i++) {
 }
 
 hud = instance_create(0, 0, obj_menus_hud);
-hud.player1_inst_id = inst_ids[0];
-hud.player2_inst_id = inst_ids[1];
+hud.player_inst_ids[0] = inst_ids[0];
+hud.player_inst_ids[1] = inst_ids[1];

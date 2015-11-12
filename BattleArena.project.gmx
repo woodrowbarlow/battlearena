@@ -193,6 +193,7 @@
         <sprite>sprites\spr_item_ammo_auto_rifle</sprite>
         <sprite>sprites\spr_item_ammo_shotgun</sprite>
         <sprite>sprites\spr_item_ammo_acid_gun</sprite>
+        <sprite>sprites\spr_item_ammo_seeker_rocket</sprite>
       </sprites>
       <sprite>sprites\spr_item_rifle_bullet</sprite>
       <sprite>sprites\spr_item_health</sprite>
@@ -208,6 +209,7 @@
           <sprite>sprites\spr_menus_hud_weap_auto_rifle</sprite>
           <sprite>sprites\spr_menus_hud_weap_shotgun</sprite>
           <sprite>sprites\spr_menus_hud_weap_acid_gun</sprite>
+          <sprite>sprites\spr_menus_hud_weap_seeker_rocket</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -422,6 +424,7 @@
       <object>objects\obj_item_ammo_auto_rifle</object>
       <object>objects\obj_item_ammo_shotgun</object>
       <object>objects\obj_item_ammo_acid_gun</object>
+      <object>objects\obj_item_ammo_seeker_rocket</object>
     </objects>
     <object>objects\obj_escape</object>
   </objects>
