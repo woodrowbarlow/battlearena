@@ -81,6 +81,22 @@ if (abs(argument0.delta_x) > 0) {
     argument0.facing_direction = sign(argument0.delta_x);
 }
 
+// if the character has pending knockback, process it
+if (argument0.knockback != 0) {
+    if (abs(argument0.knockback) <= G_GRID_SIZE / 2) {
+        argument0.delta_x += argument0.knockback;
+        argument0.knockback = 0;
+    }
+    else if (argument0.knockback < 0) {
+        argument0.delta_x -= G_GRID_SIZE / 2;
+        argument0.knockback += G_GRID_SIZE / 2;
+    }
+    else {
+        argument0.delta_x += G_GRID_SIZE / 2;
+        argument0.knockback -= G_GRID_SIZE / 2;
+    }
+}
+
 // if we're about to collide horizontally with a solid object
 if (place_meeting(argument0.x + argument0.delta_x, argument0.y, obj_plat_par_solid)) {
     // get as close to it as we can without actually intersecting

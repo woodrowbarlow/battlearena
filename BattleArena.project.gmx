@@ -256,6 +256,7 @@
     <script>scripts\scr_character_death.gml</script>
     <script>scripts\scr_character_animate.gml</script>
     <script>scripts\scr_character_weapon_use.gml</script>
+    <script>scripts\scr_initialize_arena.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>

@@ -174,7 +174,7 @@ for (i = 0; i < instance_number(obj_characters_parent); i++) {
         enemy.y >= min_y && enemy.y <= max_y) {
         
         enemy.character_health -= (1 - other.damage_reduction) * damage;
-        enemy.x += sign(argument0.facing_direction) * G_GRID_SIZE * knockback;
+        enemy.knockback += sign(argument0.facing_direction) * G_GRID_SIZE * knockback;
         return 0;   // remove return if punches should go through multiple people
     }
 }
