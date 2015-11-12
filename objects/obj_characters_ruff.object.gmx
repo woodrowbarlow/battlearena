@@ -36,6 +36,10 @@ special_cooldown                    = 10;   // seconds
 airjump_limit                       = 0;    // number
 airjump_height                      = 0.50; // percent
 
+// ruff's special ability
+stun_range                          = 5;    // blocks
+stun_duration                       = 3;    // seconds
+
 // weapon information
 weapon_held = 0;
 weapon_ammos[W_MELEE_ID]            = DEFAULT_STARTING_AMMO_MELEE;

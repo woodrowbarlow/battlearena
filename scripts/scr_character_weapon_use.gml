@@ -14,6 +14,9 @@ for (i = 0; i < array_length_1d(argument0.weapon_timers); i++) {
 if (argument0.special_timer > 0) {
     argument0.special_timer --;
 }
+if (argument0.stun_timer > 0) {
+    argument0.stun_timer --;
+}
 
 // this block handles switching weapons
 if (switch_weapon != 0) {
@@ -275,9 +278,18 @@ argument0.x += dx;
 argument0.y -= dy;
 
 #define scr_perform_special_ruff
-show_debug_message("player " + string(argument0.player_id) +
-    "performing ruff's special");
-show_debug_message("ruff's special not yet implemented");
+var enemy;
+
+for (i = 0; i < instance_number(obj_characters_parent); i++) {
+    enemy = instance_find(obj_characters_parent, i);
+    if (enemy == argument0) continue;   // ruff is not affected by his own special
+    with (argument0) {
+        if (distance_to_object(enemy) <= stun_range * G_GRID_SIZE &&
+            scr_is_on_floor(enemy)) {
+            enemy.stun_timer = stun_duration * room_speed;  // stun 'em
+        }
+    }
+}
 
 #define scr_perform_special_aerie
 show_debug_message("player " + string(argument0.player_id) +

@@ -1,13 +1,20 @@
 #define scr_character_physics
 ///scr_character_physics(character_instance_id)
 
-// read input from controller/keyboard
-var move_horiz = scr_pressed_right(argument0.player_id, true) - scr_pressed_left(argument0.player_id, true);
-var move_vert = scr_pressed_down(argument0.player_id, true) - scr_pressed_up(argument0.player_id, true);
-var jump = scr_pressed_jump(argument0.player_id, false);
+// initialize the variables we'll be using
+var move_horiz = 0;
+var move_vert = 0;
+var jump = 0;
 var max_move_speed = 5 * argument0.move_speed;
 var max_jump_height = 14 * argument0.jump_height;
 var terminal_velocity = 10*argument0.arena_gravity;
+
+// if character is not stunned, read input from controller/keyboard
+if (argument0.stun_timer <= 0) {
+    move_horiz = scr_pressed_right(argument0.player_id, true) - scr_pressed_left(argument0.player_id, true);
+    move_vert = scr_pressed_down(argument0.player_id, true) - scr_pressed_up(argument0.player_id, true);
+    jump = scr_pressed_jump(argument0.player_id, false);
+}
 
 if (argument0.on_ladder) {
     var dx = move_horiz * max_move_speed;
