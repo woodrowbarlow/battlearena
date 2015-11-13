@@ -199,6 +199,7 @@
       <sprite>sprites\spr_item_health</sprite>
       <sprite>sprites\spr_acid</sprite>
       <sprite>sprites\spr_item_rocket</sprite>
+      <sprite>sprites\spr_item_explosion</sprite>
     </sprites>
     <sprites name="menus">
       <sprites name="hud">
@@ -405,6 +406,7 @@
       <object>objects\obj_proj_shotgun_bullet</object>
       <object>objects\obj_proj_acid_gun_bullet</object>
       <object>objects\obj_proj_seeker_rocket</object>
+      <object>objects\obj_proj_explosion</object>
     </objects>
     <objects name="music">
       <objects name="parents">
