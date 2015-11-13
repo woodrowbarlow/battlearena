@@ -151,7 +151,7 @@ for(i = 0; i &lt; array_length_1d(player_inst_ids[1].weapon_ammos); i++) {
 // draw the ammo bars
 for(i = 0; i &lt; array_length_1d(player_inst_ids[1].weapon_ammos); i++) {
     if (player_inst_ids[1].weapon_ammos[i] &gt;= 0) {
-        draw_text(496 + 20 * i,450,string(player_inst_ids[0].weapon_ammos[i]));
+        draw_text(496 + 20 * i,450,string(player_inst_ids[1].weapon_ammos[i]));
     }
 }
 </string>

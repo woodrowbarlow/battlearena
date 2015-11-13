@@ -251,9 +251,13 @@ audio_play_sound(snd_shotgun, 1, false);
 
 
 #define scr_shoot_seeker_rocket
-show_debug_message("player " + string(argument0.player_id) +
-    " firing seeker rocket");
-show_debug_message("seeker rocket not yet implemented");
+// deduct one ammo.
+argument0.weapon_ammos[W_SEEKER_ROCKET_ID] --;
+// spawn a rocket.
+var rocket = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
+    argument0.y - 8, obj_proj_seeker_rocket);
+rocket.fired_by = argument0.player_id;
+
 #define scr_perform_special_sallie
 var dx = argument0.teleport_distance * G_GRID_SIZE
     * sign(argument0.facing_direction);
