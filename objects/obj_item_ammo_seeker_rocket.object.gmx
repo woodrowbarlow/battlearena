@@ -30,6 +30,7 @@ timer = 0;
 respawn_time = 45;
 weapon_id = W_SEEKER_ROCKET_ID;
 ammo_given = 3;
+max_ammo = DEFAULT_MAX_AMMO_SEEKER_ROCKET;
 image_speed = 0.05;
 </string>
           </argument>

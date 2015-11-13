@@ -206,6 +206,7 @@
         <sprite>sprites\spr_menus_hud_bigheart_1</sprite>
         <sprite>sprites\spr_menus_hud_bigheart_2</sprite>
         <sprite>sprites\spr_menus_hud_heart</sprite>
+        <sprite>sprites\spr_menus_hud_no</sprite>
         <sprites name="weapons">
           <sprite>sprites\spr_menus_hud_weap_melee</sprite>
           <sprite>sprites\spr_menus_hud_weap_auto_rifle</sprite>
@@ -432,9 +433,6 @@
     </objects>
     <object>objects\obj_escape</object>
   </objects>
-  <timelines name="timelines">
-    <timeline>timelines\timeline1</timeline>
-  </timelines>
   <rooms name="rooms">
     <rooms name="menus">
       <room>rooms\rm_menus_splash</room>

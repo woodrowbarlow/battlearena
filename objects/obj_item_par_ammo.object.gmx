@@ -59,6 +59,9 @@
 active = false;
 
 other.weapon_ammos[weapon_id] += ammo_given;
+if (other.weapon_ammos[weapon_id] &gt; max_ammo) {
+    other.weapon_ammos[weapon_id] = max_ammo;
+}
 audio_play_sound(snd_dive, 10, false);
 </string>
           </argument>

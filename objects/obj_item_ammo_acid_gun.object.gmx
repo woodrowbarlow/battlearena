@@ -30,6 +30,7 @@ timer = 0;
 respawn_time = 10;
 weapon_id = W_ACID_GUN_ID;
 ammo_given = 25;
+max_ammo = DEFAULT_MAX_AMMO_ACID_GUN;
 image_speed = 0.05;
 </string>
           </argument>
