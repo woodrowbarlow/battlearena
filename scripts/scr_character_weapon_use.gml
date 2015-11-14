@@ -4,8 +4,8 @@ var switch_weapon = scr_pressed_next_weapon(argument0.player_id, false) -
 var pressed_attack = scr_pressed_fire(argument0.player_id, false);
 var held_attack = scr_pressed_fire(argument0.player_id, true);
 var pressed_special = scr_pressed_special(argument0.player_id, false);
-
 var i;
+
 for (i = 0; i < array_length_1d(argument0.weapon_timers); i++) {
     if (argument0.weapon_timers[i] > 0) {
         argument0.weapon_timers[i]--;

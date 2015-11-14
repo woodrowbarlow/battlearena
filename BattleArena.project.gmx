@@ -398,6 +398,7 @@
       <object>objects\obj_menus_victory</object>
       <object>objects\obj_menus_hudice</object>
       <object>objects\obj_menus_hudtemp</object>
+      <object>objects\obj_menus_pause</object>
     </objects>
     <objects name="projectile">
       <objects name="parents">

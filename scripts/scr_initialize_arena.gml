@@ -23,11 +23,11 @@ for (i = 0; i < number_of_players; i++) {
     else inst_ids[i].facing_direction = -1;
     inst_ids[i].stun_timer = 0;
     inst_ids[i].special_timer = 0;
-    inst_ids[i].weapon_timers[0] = 0;
-    inst_ids[i].weapon_timers[1] = 0;
-    inst_ids[i].weapon_timers[2] = 0;
-    inst_ids[i].weapon_timers[3] = 0;
-    inst_ids[i].weapon_timers[4] = 0;
+    inst_ids[i].weapon_timers[W_MELEE_ID] = 0;
+    inst_ids[i].weapon_timers[W_AUTO_RIFLE_ID] = 0;
+    inst_ids[i].weapon_timers[W_SHOTGUN_ID] = 0;
+    inst_ids[i].weapon_timers[W_ACID_GUN_ID] = 0;
+    inst_ids[i].weapon_timers[W_SEEKER_ROCKET_ID] = 0;
     inst_ids[i].knockback = 0;
 }
 
