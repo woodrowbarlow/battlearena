@@ -1,17 +1,21 @@
 #define scr_character_weapon_use
-///scr_character_weapon_use(character_instance_id)
-
 var switch_weapon = scr_pressed_next_weapon(argument0.player_id, false) - 
     scr_pressed_prev_weapon(argument0.player_id, false);
 var pressed_attack = scr_pressed_fire(argument0.player_id, false);
 var held_attack = scr_pressed_fire(argument0.player_id, true);
 var pressed_special = scr_pressed_special(argument0.player_id, false);
-
 var i;
+
 for (i = 0; i < array_length_1d(argument0.weapon_timers); i++) {
     if (argument0.weapon_timers[i] > 0) {
         argument0.weapon_timers[i]--;
     }
+}
+if (argument0.special_timer > 0) {
+    argument0.special_timer --;
+}
+if (argument0.stun_timer > 0) {
+    argument0.stun_timer --;
 }
 
 // this block handles switching weapons
@@ -110,6 +114,33 @@ while (argument0.weapon_ammos[argument0.weapon_held] == 0) {
     }
 }
 
+// this block handles activating the special attack / ability
+// it checks to see which character you are then calls the appropriate script
+if (pressed_special > 0 && argument0.special_timer <= 0) {
+    argument0.special_timer = special_cooldown * room_speed;
+    switch (argument0.character_id) {
+    case CHARACTER_ID_SALLIE:
+        scr_perform_special_sallie(argument0);
+        break;
+    case CHARACTER_ID_RUFF:
+        scr_perform_special_ruff(argument0);
+        break;
+    case CHARACTER_ID_AERIE:
+        scr_perform_special_aerie(argument0);
+        break;
+    case CHARACTER_ID_PENN:
+        scr_perform_special_penn(argument0);
+        break;
+    // error state
+    default:
+        // this shouldn't be possible unless a character has been added
+        // but wasn't added here. log the error.
+        show_debug_message("player " + string(argument0.player_id) +
+            " character_id constant is unexpected (=" +
+            string(argument0.weapon_held) + ")");
+    }
+}
+
 #define scr_perform_melee_attack
 ///scr_perform_melee_attack(character_instance_id)
 
@@ -126,10 +157,12 @@ max_y = argument0.y + argument0.sprite_height / 2;
 if (argument0.facing_direction > 0) {
     min_x = argument0.x;
     max_x = argument0.x + range * G_GRID_SIZE;
+    audio_play_sound(snd_shoot1, 1, false);
 }
 else {
     min_x = argument0.x - range * G_GRID_SIZE;
     max_x = argument0.x;
+    audio_play_sound(snd_shoot1, 1, false);
 }
 
 for (i = 0; i < instance_number(obj_characters_parent); i++) {
@@ -141,24 +174,39 @@ for (i = 0; i < instance_number(obj_characters_parent); i++) {
         enemy.y >= min_y && enemy.y <= max_y) {
         
         enemy.character_health -= (1 - other.damage_reduction) * damage;
-        enemy.x += sign(argument0.facing_direction) * G_GRID_SIZE * knockback;
+        enemy.knockback += sign(argument0.facing_direction) * G_GRID_SIZE * knockback;
         return 0;   // remove return if punches should go through multiple people
     }
 }
 
 #define scr_shoot_auto_rifle
-///scr_shoot_auto_rifle(character_instance_id)
-
 // deduct one ammo.
 argument0.weapon_ammos[W_AUTO_RIFLE_ID] --;
 // spawn a bullet and set its speed.
 var bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_rifle_bullet);
-bullet.hspeed = 8 * argument0.facing_direction;
+bullet.hspeed = 12 * argument0.facing_direction;
 bullet.fired_by = argument0.player_id;
+audio_play_sound(snd_shoot2, 1, false);
+
+
+
+#define scr_shoot_acid_gun
+show_debug_message("player " + string(argument0.player_id) +
+    " firing acid gun");
+
+// deduct one ammo.
+argument0.weapon_ammos[W_ACID_GUN_ID] --;
+// spawn a bullet and set its speed.
+var bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
+    argument0.y-8, obj_proj_acid_gun_bullet);
+bullet.hspeed = 2 * argument0.facing_direction;
+bullet.vspeed = -2;
+audio_play_sound(snd_ooze, 1, false);
+
+
 
 #define scr_shoot_shotgun
-///scr_shoot_shotgun(character_instance_id)
 
 // shotgun uses 5 bullets per shot, so if the player
 // doesn't have at least that much ammo, terminate.
@@ -169,54 +217,90 @@ if (argument0.weapon_ammos[W_SHOTGUN_ID] < 5) {
 }
 // otherwise, go ahead and deduct the ammo.
 argument0.weapon_ammos[W_SHOTGUN_ID] -= 5;
-// fired at 30 degree ascension
+// fired at 15 degree ascension
 var bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_shotgun_bullet);
-bullet.hspeed = 2.6 * argument0.facing_direction;
-bullet.vspeed = -1.5;
+bullet.hspeed = 7.72 * argument0.facing_direction;
+bullet.vspeed = -2.07;
 bullet.fired_by = argument0.player_id;
-// fired at 15 degree ascension
+// fired at 7.5 degree ascension
 bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_shotgun_bullet);
-bullet.hspeed = 2.9 * argument0.facing_direction;
-bullet.vspeed = -0.78;
+bullet.hspeed = 7.93 * argument0.facing_direction;
+bullet.vspeed = -1.044;
 bullet.fired_by = argument0.player_id;
 // fired at level
 bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_shotgun_bullet);
-bullet.hspeed = 3 * argument0.facing_direction;
+bullet.hspeed = 8 * argument0.facing_direction;
 bullet.vspeed = 0;
+bullet.fired_by = argument0.player_id;
+// fired at 7.5 degree descension
+bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
+    argument0.y - 8, obj_proj_shotgun_bullet);
+bullet.hspeed = 7.93 * argument0.facing_direction;
+bullet.vspeed = 1.044;
 bullet.fired_by = argument0.player_id;
 // fired at 15 degree descension
 bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_shotgun_bullet);
-bullet.hspeed = 2.9 * argument0.facing_direction;
-bullet.vspeed = 0.78;
+bullet.hspeed = 7.72 * argument0.facing_direction;
+bullet.vspeed = 2.07;
 bullet.fired_by = argument0.player_id;
-// fired at 30 degree descension
-bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
-    argument0.y - 8, obj_proj_shotgun_bullet);
-bullet.hspeed = 2.6 * argument0.facing_direction;
-bullet.vspeed = 1.5;
-bullet.fired_by = argument0.player_id;
+audio_play_sound(snd_shotgun, 1, false);
 
-#define scr_shoot_acid_gun
-///scr_shoot_acid_gun(character_instance_id)
-
-show_debug_message("player " + string(argument0.player_id) +
-    " firing acid gun");
-
-// deduct one ammo.
-argument0.weapon_ammos[W_ACID_GUN_ID] --;
-// spawn a bullet and set its speed.
-var bullet = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
-    argument0.y-8, obj_proj_acid_gun_bullet);
-bullet.hspeed = 3 * argument0.facing_direction;
-bullet.vspeed = -2;
 
 #define scr_shoot_seeker_rocket
-///scr_shoot_seeker_rocket(character_instance_id)
+// deduct one ammo.
+argument0.weapon_ammos[W_SEEKER_ROCKET_ID] --;
+// spawn a rocket.
+var rocket = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
+    argument0.y - 8, obj_proj_seeker_rocket);
+rocket.fired_by = argument0.player_id;
 
+#define scr_perform_special_sallie
+var dx = argument0.teleport_distance * G_GRID_SIZE
+    * sign(argument0.facing_direction);
+var dy = 0;
+
+if (scr_pressed_up(argument0.player_id, true)) {
+    dy = argument0.teleport_distance * G_GRID_SIZE / 3;
+}
+
+if (!scr_pressed_left(argument0.player_id, true)
+    && !scr_pressed_right(argument0.player_id, true)) {
+    if (scr_pressed_up(argument0.player_id, true)) {
+        dx = 0;
+        dy *= 3;
+    }
+    else {
+        argument0.facing_direction *= -1;
+    }
+}
+
+argument0.x += dx;
+argument0.y -= dy;
+
+#define scr_perform_special_ruff
+var enemy;
+
+for (i = 0; i < instance_number(obj_characters_parent); i++) {
+    enemy = instance_find(obj_characters_parent, i);
+    if (enemy == argument0) continue;   // ruff is not affected by his own special
+    with (argument0) {
+        if (distance_to_object(enemy) <= stun_range * G_GRID_SIZE &&
+            scr_is_on_floor(enemy)) {
+            enemy.stun_timer = stun_duration * room_speed;  // stun 'em
+        }
+    }
+}
+
+#define scr_perform_special_aerie
 show_debug_message("player " + string(argument0.player_id) +
-    " firing seeker rocket");
-show_debug_message("seeker rocket not yet implemented");
+    "performing aerie's special");
+show_debug_message("aerie's special not yet implemented");
+
+#define scr_perform_special_penn
+show_debug_message("player " + string(argument0.player_id) +
+    "performing penn's special");
+show_debug_message("penn's special not yet implemented");

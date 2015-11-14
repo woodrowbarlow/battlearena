@@ -1,13 +1,20 @@
 #define scr_character_physics
 ///scr_character_physics(character_instance_id)
 
-// read input from controller/keyboard
-var move_horiz = scr_pressed_right(argument0.player_id, true) - scr_pressed_left(argument0.player_id, true);
-var move_vert = scr_pressed_down(argument0.player_id, true) - scr_pressed_up(argument0.player_id, true);
-var jump = scr_pressed_jump(argument0.player_id, false);
-var max_move_speed = 4 * argument0.move_speed;
-var max_jump_height = 12 * argument0.jump_height;
+// initialize the variables we'll be using
+var move_horiz = 0;
+var move_vert = 0;
+var jump = 0;
+var max_move_speed = 5 * argument0.move_speed;
+var max_jump_height = 14 * argument0.jump_height;
 var terminal_velocity = 10*argument0.arena_gravity;
+
+// if character is not stunned, read input from controller/keyboard
+if (argument0.stun_timer <= 0) {
+    move_horiz = scr_pressed_right(argument0.player_id, true) - scr_pressed_left(argument0.player_id, true);
+    move_vert = scr_pressed_down(argument0.player_id, true) - scr_pressed_up(argument0.player_id, true);
+    jump = scr_pressed_jump(argument0.player_id, false);
+}
 
 if (argument0.on_ladder) {
     var dx = move_horiz * max_move_speed;
@@ -33,7 +40,7 @@ if (place_meeting(argument0.x,argument0.y+1,obj_plat_par_solid)
     // move_speed is a signed float from -1 to 1 indicating magnitude and direction
     argument0.delta_x = max_move_speed * move_horiz;
     argument0.delta_y = 0;
-    if (place_meeting(argument0.x,argument0.y,obj_deco_elem_ladder) && move_vert <= 0.7) {
+    if (place_meeting(argument0.x,argument0.y,obj_deco_elem_ladder) && move_vert <= -0.7) {
         argument0.on_ladder = true;
         return 0;
     }
@@ -41,6 +48,7 @@ if (place_meeting(argument0.x,argument0.y+1,obj_plat_par_solid)
     if (jump > 0) {
         // for y-axis, positive is down and negative is up
         argument0.delta_y = -max_jump_height;
+        audio_play_sound(snd_jump, 1, false);
     }
     argument0.airjumps_remaining = argument0.airjump_limit;
 }
@@ -49,6 +57,7 @@ if (place_meeting(argument0.x,argument0.y+1,obj_plat_par_solid)
 else {
     if (jump && argument0.airjumps_remaining > 0) {
         argument0.delta_y = -max_jump_height * argument0.airjump_height;
+        audio_play_sound(snd_jump, 1, false);
         argument0.airjumps_remaining --;
     }
     // you can't control movement in mid-air as well
@@ -70,6 +79,22 @@ else {
 
 if (abs(argument0.delta_x) > 0) {
     argument0.facing_direction = sign(argument0.delta_x);
+}
+
+// if the character has pending knockback, process it
+if (argument0.knockback != 0) {
+    if (abs(argument0.knockback) <= G_GRID_SIZE / 2) {
+        argument0.delta_x += argument0.knockback;
+        argument0.knockback = 0;
+    }
+    else if (argument0.knockback < 0) {
+        argument0.delta_x -= G_GRID_SIZE / 2;
+        argument0.knockback += G_GRID_SIZE / 2;
+    }
+    else {
+        argument0.delta_x += G_GRID_SIZE / 2;
+        argument0.knockback -= G_GRID_SIZE / 2;
+    }
 }
 
 // if we're about to collide horizontally with a solid object

@@ -80,7 +80,7 @@
     <option_freeze>false</option_freeze>
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
-    <option_fullscreen>False</option_fullscreen>
+    <option_fullscreen>True</option_fullscreen>
     <option_gameguid>{6452E31C-B5E9-4C8F-B703-9E8947826FBE}</option_gameguid>
     <option_gameid>392507576</option_gameid>
     <option_haptic_effects>0</option_haptic_effects>
@@ -272,7 +272,7 @@
     <option_screenkey>True</option_screenkey>
     <option_screenshotkey>true</option_screenshotkey>
     <option_shortcircuit>True</option_shortcircuit>
-    <option_showcursor>True</option_showcursor>
+    <option_showcursor>False</option_showcursor>
     <option_showprogress>1</option_showprogress>
     <option_sizeable>False</option_sizeable>
     <option_stayontop>false</option_stayontop>
@@ -457,13 +457,22 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="16">
+    <constants number="25">
       <constant name="G_GRID_SIZE">32</constant>
       <constant name="W_MELEE_ID">0</constant>
       <constant name="W_AUTO_RIFLE_ID">1</constant>
       <constant name="W_SHOTGUN_ID">2</constant>
       <constant name="W_ACID_GUN_ID">3</constant>
       <constant name="W_SEEKER_ROCKET_ID">4</constant>
+      <constant name="CHARACTER_ID_SALLIE">0</constant>
+      <constant name="CHARACTER_ID_RUFF">1</constant>
+      <constant name="CHARACTER_ID_AERIE">2</constant>
+      <constant name="CHARACTER_ID_PENN">3</constant>
+      <constant name="DEFAULT_MAX_AMMO_MELEE">-1</constant>
+      <constant name="DEFAULT_MAX_AMMO_AUTO_RIFLE">150</constant>
+      <constant name="DEFAULT_MAX_AMMO_SHOTGUN">70</constant>
+      <constant name="DEFAULT_MAX_AMMO_ACID_GUN">40</constant>
+      <constant name="DEFAULT_MAX_AMMO_SEEKER_ROCKET">10</constant>
       <constant name="DEFAULT_STARTING_AMMO_MELEE">-1</constant>
       <constant name="DEFAULT_STARTING_AMMO_AUTO_RIFLE">75</constant>
       <constant name="DEFAULT_STARTING_AMMO_SHOTGUN">35</constant>

@@ -54,7 +54,7 @@ instance_destroy();
 
 if (other.player_id != fired_by) {
     other.character_health -= (1 - other.damage_reduction) * damage;
-    other.x += sign(hspeed) * knockback * G_GRID_SIZE;
+    other.knockback += sign(hspeed) * knockback * G_GRID_SIZE;
     instance_destroy();
 }
 </string>

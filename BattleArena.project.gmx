@@ -7,6 +7,30 @@
   <sounds name="sound">
     <sounds name="arenas">
       <sound>sound\snd_arenas_knoll</sound>
+      <sound>sound\snd_arenas_knoll2</sound>
+      <sound>sound\snd_arenas_ice</sound>
+      <sound>sound\snd_menu_bgm</sound>
+      <sound>sound\snd_arenas_moon</sound>
+      <sound>sound\snd_arenas_temple</sound>
+    </sounds>
+    <sounds name="sound effects">
+      <sound>sound\snd_death</sound>
+      <sound>sound\snd_hit</sound>
+      <sound>sound\snd_ice1</sound>
+      <sound>sound\snd_ice2</sound>
+      <sound>sound\snd_ice3</sound>
+      <sound>sound\snd_jump</sound>
+      <sound>sound\snd_menu</sound>
+      <sound>sound\snd_ooze</sound>
+      <sound>sound\snd_kakaka</sound>
+      <sound>sound\snd_shoot1</sound>
+      <sound>sound\snd_shoot2</sound>
+      <sound>sound\snd_shotgun</sound>
+      <sound>sound\snd_dive</sound>
+      <sound>sound\snd_rocket_explosion</sound>
+      <sound>sound\snd_rocket_shoot</sound>
+      <sound>sound\snd_ruff</sound>
+      <sound>sound\snd_teleport</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -36,6 +60,27 @@
           <sprite>sprites\spr_plat_fg_grass_narrow_bot</sprite>
           <sprite>sprites\spr_plat_fg_grass_tiny</sprite>
         </sprites>
+        <sprites name="space">
+          <sprite>sprites\spr_moon</sprite>
+          <sprite>sprites\spr_moon_wall</sprite>
+        </sprites>
+        <sprites name="snow">
+          <sprite>sprites\spr_snow_top</sprite>
+          <sprite>sprites\spr_snow_edge1</sprite>
+          <sprite>sprites\spr_snow_edge2</sprite>
+          <sprite>sprites\spr_snow_middle</sprite>
+          <sprite>sprites\spr_snow_slope1</sprite>
+          <sprite>sprites\spr_snow_slope2</sprite>
+          <sprite>sprites\spr_semi</sprite>
+          <sprite>sprites\spr_full</sprite>
+        </sprites>
+        <sprites name="temple">
+          <sprite>sprites\spr_bricks1</sprite>
+          <sprite>sprites\spr_bricks2</sprite>
+          <sprite>sprites\spr_bricks2_old</sprite>
+          <sprite>sprites\spr_bricks2_color</sprite>
+          <sprite>sprites\spr_arch_small</sprite>
+        </sprites>
       </sprites>
       <sprites name="background">
         <sprites name="grass">
@@ -61,6 +106,14 @@
           <sprite>sprites\spr_plat_bg_grass_narrow_mid</sprite>
           <sprite>sprites\spr_plat_bg_grass_narrow_bot</sprite>
           <sprite>sprites\spr_plat_bg_grass_tiny</sprite>
+        </sprites>
+        <sprites name="space">
+          <sprite>sprites\spr_space_wall_1</sprite>
+          <sprite>sprites\spr_space_wall_2</sprite>
+          <sprite>sprites\spr_space_wall_3</sprite>
+          <sprite>sprites\spr_space_wall_4</sprite>
+          <sprite>sprites\spr_space_halfwall</sprite>
+          <sprite>sprites\spr_space_space</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -95,6 +148,17 @@
         <sprite>sprites\spr_deco_elem_bridge_rslope_inner</sprite>
         <sprite>sprites\spr_deco_elem_bridge_rslope_inner_mask</sprite>
         <sprite>sprites\spr_deco_elem_bridge_mid</sprite>
+      </sprites>
+      <sprites name="space">
+        <sprite>sprites\spr_pln</sprite>
+      </sprites>
+      <sprites name="snow">
+        <sprite>sprites\spr_icicle</sprite>
+        <sprite>sprites\spr_ladder</sprite>
+        <sprite>sprites\spr_snowman</sprite>
+      </sprites>
+      <sprites name="temple">
+        <sprite>sprites\spr_ladder_temple</sprite>
       </sprites>
     </sprites>
     <sprites name="characters">
@@ -132,25 +196,67 @@
         <sprite>sprites\spr_item_ammo_auto_rifle</sprite>
         <sprite>sprites\spr_item_ammo_shotgun</sprite>
         <sprite>sprites\spr_item_ammo_acid_gun</sprite>
+        <sprite>sprites\spr_item_ammo_seeker_rocket</sprite>
       </sprites>
       <sprite>sprites\spr_item_rifle_bullet</sprite>
       <sprite>sprites\spr_item_health</sprite>
+      <sprite>sprites\spr_acid</sprite>
+      <sprite>sprites\spr_item_rocket</sprite>
+      <sprite>sprites\spr_item_explosion</sprite>
     </sprites>
     <sprites name="menus">
       <sprites name="hud">
         <sprite>sprites\spr_menus_hud_bigheart_1</sprite>
         <sprite>sprites\spr_menus_hud_bigheart_2</sprite>
         <sprite>sprites\spr_menus_hud_heart</sprite>
+        <sprite>sprites\spr_menus_hud_no</sprite>
         <sprites name="weapons">
           <sprite>sprites\spr_menus_hud_weap_melee</sprite>
           <sprite>sprites\spr_menus_hud_weap_auto_rifle</sprite>
           <sprite>sprites\spr_menus_hud_weap_shotgun</sprite>
           <sprite>sprites\spr_menus_hud_weap_acid_gun</sprite>
+          <sprite>sprites\spr_menus_hud_weap_seeker_rocket</sprite>
         </sprites>
       </sprites>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+    <background>background\tile_snow_left</background>
+    <background>background\tile_snow_right</background>
+    <background>background\tile_snow_mid</background>
+    <background>background\tile_snow</background>
+    <background>background\tile_snowman</background>
+    <background>background\tile_snow_edge_right</background>
+    <background>background\tile_snow_edge_left</background>
+    <backgrounds name="temple">
+      <background>background\tile_bricks1</background>
+      <background>background\tile_bricks2</background>
+      <background>background\tile_bricks2_color</background>
+      <background>background\tile_bricks2_old</background>
+      <background>background\tile_arch_small</background>
+      <background>background\tile_bricks3</background>
+      <background>background\tile_bricks3_small</background>
+      <background>background\tile_arch_big</background>
+      <background>background\tile_bigbricks</background>
+      <background>background\tile_bigbricks_old</background>
+      <background>background\tile_bigbricks_color</background>
+      <background>background\tile_bigbricks_color_old</background>
+      <background>background\tile_roof</background>
+      <background>background\tile_black</background>
+      <background>background\tile_black_old</background>
+      <background>background\tile_blackcurve</background>
+      <background>background\tile_blackcurve_old</background>
+      <background>background\tile_treasure1</background>
+      <background>background\tile_treasure2</background>
+      <background>background\tile_pot1</background>
+      <background>background\tile_pot2</background>
+      <background>background\tile_pillar1</background>
+      <background>background\tile_pillar2</background>
+      <background>background\tile_pillar3</background>
+      <background>background\tile_cloud_temple</background>
+    </backgrounds>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_keypressed.gml</script>
@@ -158,6 +264,7 @@
     <script>scripts\scr_character_death.gml</script>
     <script>scripts\scr_character_animate.gml</script>
     <script>scripts\scr_character_weapon_use.gml</script>
+    <script>scripts\scr_initialize_arena.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
@@ -199,6 +306,11 @@
           <object>objects\obj_plat_fg_grass_narrow_bot</object>
           <object>objects\obj_plat_fg_grass_tiny</object>
         </objects>
+        <objects name="space">
+          <object>objects\obj_moon</object>
+          <object>objects\obj_moon_wall</object>
+        </objects>
+        <object>objects\obj_full</object>
       </objects>
       <objects name="background">
         <objects name="grass">
@@ -225,6 +337,18 @@
           <object>objects\obj_plat_bg_grass_narrow_bot</object>
           <object>objects\obj_plat_bg_grass_tiny</object>
         </objects>
+        <objects name="space">
+          <object>objects\obj_space_wall_1</object>
+          <object>objects\obj_space_wall_2</object>
+          <object>objects\obj_space_wall_3</object>
+          <object>objects\obj_space_wall_4</object>
+          <object>objects\obj_space_halfwall</object>
+        </objects>
+        <objects name="snow">
+          <object>objects\obj_slope_left</object>
+          <object>objects\obj_slope_right</object>
+        </objects>
+        <object>objects\obj_half</object>
       </objects>
       <objects name="parents">
         <object>objects\obj_plat_par_solid</object>
@@ -259,6 +383,14 @@
         <object>objects\obj_deco_elem_bridge_rslope_inner</object>
         <object>objects\obj_deco_elem_bridge_mid</object>
       </objects>
+      <objects name="space">
+        <object>objects\obj_pln</object>
+      </objects>
+      <objects name="snow">
+        <object>objects\obj_icicle</object>
+        <object>objects\obj_ladderSnow</object>
+      </objects>
+      <object>objects\obj_ladder_temple</object>
     </objects>
     <objects name="menus">
       <object>objects\obj_menus_splash</object>
@@ -266,6 +398,10 @@
       <object>objects\obj_menus_arenaselect</object>
       <object>objects\obj_menus_options</object>
       <object>objects\obj_menus_hud</object>
+      <object>objects\obj_menus_victory</object>
+      <object>objects\obj_menus_hudice</object>
+      <object>objects\obj_menus_hudtemp</object>
+      <object>objects\obj_menus_pause</object>
     </objects>
     <objects name="projectile">
       <objects name="parents">
@@ -274,6 +410,8 @@
       <object>objects\obj_proj_rifle_bullet</object>
       <object>objects\obj_proj_shotgun_bullet</object>
       <object>objects\obj_proj_acid_gun_bullet</object>
+      <object>objects\obj_proj_seeker_rocket</object>
+      <object>objects\obj_proj_explosion</object>
     </objects>
     <objects name="music">
       <objects name="parents">
@@ -281,6 +419,10 @@
       </objects>
       <objects name="arenas">
         <object>objects\obj_music_arenas_knoll</object>
+        <object>objects\obj_music_arenas_knoll2</object>
+        <object>objects\obj_music_arenas_ice</object>
+        <object>objects\obj_music_arenas_temple</object>
+        <object>objects\obj_music_arenas_moon</object>
       </objects>
     </objects>
     <objects name="items">
@@ -291,7 +433,9 @@
       <object>objects\obj_item_ammo_auto_rifle</object>
       <object>objects\obj_item_ammo_shotgun</object>
       <object>objects\obj_item_ammo_acid_gun</object>
+      <object>objects\obj_item_ammo_seeker_rocket</object>
     </objects>
+    <object>objects\obj_escape</object>
   </objects>
   <rooms name="rooms">
     <rooms name="menus">
@@ -299,9 +443,13 @@
       <room>rooms\rm_menus_characterselect</room>
       <room>rooms\rm_menus_arenaselect</room>
       <room>rooms\rm_menus_options</room>
+      <room>rooms\rm_menus_victory</room>
     </rooms>
     <rooms name="arenas">
       <room>rooms\rm_arenas_knoll</room>
+      <room>rooms\rm_arenas_moonbase</room>
+      <room>rooms\rm_arenas_ice</room>
+      <room>rooms\rm_arenas_temple</room>
     </rooms>
   </rooms>
   <help>

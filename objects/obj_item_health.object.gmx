@@ -84,6 +84,7 @@ image_speed = 0.05;
 active = false;
 
 other.character_health += 20;
+audio_play_sound(snd_dive, 1, false);
 if (other.character_health &gt; 100) {
     other.character_health = 100;
 }

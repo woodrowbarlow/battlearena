@@ -204,7 +204,13 @@ return scr_keypressed(argument0, keys, buttons, argument1);
 
 #define scr_pressed_special
 var keys, buttons;
-keys[0] = ord('X');
-keys[1] = ord('Y');
+keys[0] = vk_control;
+keys[1] = vk_tab;
 buttons[0] = gp_face3;
+return scr_keypressed(argument0, keys, buttons, argument1);
+#define scr_pressed_pause
+var keys, buttons;
+keys[0] = vk_escape;
+buttons[0] = gp_start;
+buttons[0] = gp_select;
 return scr_keypressed(argument0, keys, buttons, argument1);

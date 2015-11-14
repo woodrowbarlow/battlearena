@@ -3,7 +3,7 @@
   <spriteName>spr_characters_aerie_idle</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>obj_characters_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,6 +28,7 @@
             <string>/// Initialize Variables
 
 // character stats
+character_id                        = CHARACTER_ID_AERIE;
 jump_height                         = 0.75; // percent
 move_speed                          = 1.00; // percent
 damage_reduction                    = -.25; // percent
@@ -54,33 +55,6 @@ walk_sprite                         = spr_characters_aerie_walk;
 run_sprite                          = spr_characters_aerie_run;
 standing_jump_sprite                = spr_characters_aerie_jump;
 running_jump_sprite                 = spr_characters_aerie_longjump;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Update Status
-scr_character_physics(character_instance_id);
-scr_character_death(character_instance_id);
-scr_character_animate(character_instance_id);
-scr_character_weapon_use(character_instance_id);
 </string>
           </argument>
         </arguments>

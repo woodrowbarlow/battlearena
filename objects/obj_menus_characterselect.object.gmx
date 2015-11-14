@@ -25,17 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar number_of_players, selected_characters, starting_lives, starting_hp;
+            <string>globalvar number_of_players, selected_characters, starting_lives, starting_hp, victor;
 number_of_players = 2;
 selected_characters[0] = -1;
 selected_characters[1] = -1;
 starting_lives = 5;
 starting_hp = 100;
 
-character_names[0] = "Sallie the Salamander";
-character_names[1] = "Ruff the Rhinoceros";
-character_names[2] = "Aerie the Canary";
-character_names[3] = "Penn the Penguin";
+character_names[0] = "Blue Jake";
+character_names[1] = "Violet Wendy";
+character_names[2] = "Red Scooter";
+character_names[3] = "Green Kevin";
 character_objects[0] = obj_characters_sallie;
 character_objects[1] = obj_characters_ruff;
 character_objects[2] = obj_characters_aerie;
@@ -44,8 +44,32 @@ character_objects[3] = obj_characters_penn;
 player_selection[0] = 0;
 player_selection[1] = 0;
 
-
+victor = -1;
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>snd_menu_bgm</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -71,6 +95,12 @@ player_selection[1] = 0;
 for(i=0; i&lt;number_of_players; i++) {
     if(selected_characters[i] &lt; 0) {
         dir = scr_pressed_right(i, false) - scr_pressed_left(i, false);
+        if (dir) {
+            audio_play_sound(snd_menu, 1, false);
+        }
+        if (-dir) {
+            audio_play_sound(snd_menu, 1, false);
+        }
         player_selection[i] += dir;
         if(player_selection[i] &lt; 0) {
             player_selection[i] = array_length_1d(character_objects) - 1;
@@ -80,6 +110,7 @@ for(i=0; i&lt;number_of_players; i++) {
         }
     }
     if(scr_pressed_start(i, false) || scr_pressed_primary(i, false)) {
+        audio_play_sound(snd_menu, 1, false);
         selected_characters[i] = character_objects[player_selection[i]];
     }
 }

@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>globalvar controller_count, selected_characters;
+            <string>globalvar controller_count, selected_characters, is_paused;
+is_paused = false;
 controller_count = 0;
 var slots = gamepad_get_device_count();
 var i;

@@ -77,103 +77,103 @@ if (0.05 * frame &gt;= 1) {
           <argument>
             <kind>1</kind>
             <string>var i, color;
+var weapon_sprites, max_ammos;
+weapon_sprites[0] = spr_menus_hud_weap_melee;
+weapon_sprites[1] = spr_menus_hud_weap_auto_rifle;
+weapon_sprites[2] = spr_menus_hud_weap_shotgun;
+weapon_sprites[3] = spr_menus_hud_weap_acid_gun;
+weapon_sprites[4] = spr_menus_hud_weap_seeker_rocket;
+max_ammos[0] = DEFAULT_MAX_AMMO_MELEE;
+max_ammos[1] = DEFAULT_MAX_AMMO_AUTO_RIFLE;
+max_ammos[2] = DEFAULT_MAX_AMMO_SHOTGUN;
+max_ammos[3] = DEFAULT_MAX_AMMO_ACID_GUN;
+max_ammos[4] = DEFAULT_MAX_AMMO_SEEKER_ROCKET;
 
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_font(fnt_tiny);
-draw_set_color(c_white);
 
+// PLAYER 1
+
+// draw the heart that indicates current HP
 draw_sprite(spr_menus_hud_bigheart_2, -1, 32, 448);
 draw_sprite_ext(spr_menus_hud_bigheart_1, -1, 32, 448,
-    player1_inst_id.character_health / 100.0,
-    player1_inst_id.character_health / 100.0,
+    player_inst_ids[0].character_health / 100.0,
+    player_inst_ids[0].character_health / 100.0,
     0, c_white, 1);
-for (i = 0; i &lt; player1_inst_id.character_lives - 1; i++) {
+
+// draw the hearts that indicate remaining lives
+for (i = 0; i &lt; player_inst_ids[0].character_lives - 1; i++) {
     draw_sprite(spr_menus_hud_heart, subimage + i, 52 + (i*16), 468);
 }
-if (player1_inst_id.weapon_held == W_MELEE_ID)
-    color = c_white;
-else
-    color = c_black;
-draw_sprite_ext(spr_menus_hud_weap_melee, -1, 64, 444,
-    0.75, 0.75, 0, color, 1);
-if (player1_inst_id.weapon_held == W_AUTO_RIFLE_ID)
-    color = c_white;
-else
-    color = c_black;
-draw_sprite_ext(spr_menus_hud_weap_auto_rifle, -1, 86, 444,
-    0.75, 0.75, 0, color, 1);
-if (player1_inst_id.weapon_held == W_SHOTGUN_ID)
-    color = c_white;
-else
-    color = c_black;
-draw_sprite_ext(spr_menus_hud_weap_shotgun, -1, 106, 444,
-    0.75, 0.75, 0, color, 1);
-if (player1_inst_id.weapon_held == W_ACID_GUN_ID)
-    color = c_white;
-else
-    color = c_black;
-draw_sprite_ext(spr_menus_hud_weap_acid_gun, -1, 126, 444,
-    0.75, 0.75, 0, color, 1);
-    
-if (player1_inst_id.weapon_ammos[W_MELEE_ID] &gt;= 0) {
-    draw_text(70,450,string(player1_inst_id.weapon_ammos[W_MELEE_ID]));
+
+// draw the weapons to indicate currently selected weapon
+for (i = 0; i &lt; array_length_1d(player_inst_ids[0].weapon_ammos); i++) {
+    if (player_inst_ids[0].weapon_held == i) {
+        color = c_white;
+    }
+    else {
+        color = c_black;
+    }
+    draw_sprite_ext(weapon_sprites[i], -1, 64 + 20 * i, 444,
+        0.75, 0.75, 0, color, 1);
 }
-if (player1_inst_id.weapon_ammos[W_AUTO_RIFLE_ID] &gt;= 0) {
-    draw_text(92,450,string(player1_inst_id.weapon_ammos[W_AUTO_RIFLE_ID]));
-}
-if (player1_inst_id.weapon_ammos[W_SHOTGUN_ID] &gt;= 0) {
-    draw_text(112,450,string(player1_inst_id.weapon_ammos[W_SHOTGUN_ID]));
-}
-if (player1_inst_id.weapon_ammos[W_ACID_GUN_ID] &gt;= 0) {
-    draw_text(132,450,string(player1_inst_id.weapon_ammos[W_ACID_GUN_ID]));
+
+// draw the ammo bars
+for(i = 0; i &lt; array_length_1d(player_inst_ids[0].weapon_ammos); i++) {
+    if (player_inst_ids[0].weapon_ammos[i] == 0) {
+        draw_sprite_ext(spr_menus_hud_no, -1, 64 + 20 * i, 444,
+            0.75, 0.75, 0, c_white, 1);
+    }
+    else if (player_inst_ids[0].weapon_ammos[i] &gt; 0) {
+        draw_set_color(c_black);
+        draw_rectangle(55 + 20 * i, 450, 70 + 20 * i, 455, false);
+        draw_set_color(c_white);
+        draw_rectangle(56 + 20 * i, 451, (56 + 20 * i) +
+            (13 * (player_inst_ids[0].weapon_ammos[i] / max_ammos[i])), 454, false);
+    }
 }
 
 
+// PLAYER 2
+
+// draw the heart that indicates current HP
 draw_sprite(spr_menus_hud_bigheart_2, -1, 608, 448);
 draw_sprite_ext(spr_menus_hud_bigheart_1, -1, 608, 448,
-    player2_inst_id.character_health / 100.0,
-    player2_inst_id.character_health / 100.0,
+    player_inst_ids[1].character_health / 100.0,
+    player_inst_ids[1].character_health / 100.0,
     0, c_white, 1);
-for (i = 0; i &lt; player2_inst_id.character_lives - 1; i++) {
+
+// draw the hearts that indicate remaining lives
+for (i = 0; i &lt; player_inst_ids[1].character_lives - 1; i++) {
     draw_sprite(spr_menus_hud_heart, subimage + i, 592 - (i*16), 468);
 }
-if (player2_inst_id.weapon_held == W_MELEE_ID)
-    color = c_white;
-else
-    color = c_black;
-draw_sprite_ext(spr_menus_hud_weap_melee, -1, 510, 444,
-    0.75, 0.75, 0, color, 1);
-if (player2_inst_id.weapon_held == W_AUTO_RIFLE_ID)
-    color = c_white;
-else
-    color = c_black;
-draw_sprite_ext(spr_menus_hud_weap_auto_rifle, -1, 530, 444,
-    0.75, 0.75, 0, color, 1);
-if (player2_inst_id.weapon_held == W_SHOTGUN_ID)
-    color = c_white;
-else
-    color = c_black;
-draw_sprite_ext(spr_menus_hud_weap_shotgun, -1, 550, 444,
-    0.75, 0.75, 0, color, 1);
-if (player2_inst_id.weapon_held == W_ACID_GUN_ID)
-    color = c_white;
-else
-    color = c_black;
-draw_sprite_ext(spr_menus_hud_weap_acid_gun, -1, 572, 444,
-    0.75, 0.75, 0, color, 1);
 
-if (player2_inst_id.weapon_ammos[W_MELEE_ID] &gt;= 0) {
-    draw_text(516,450,string(player2_inst_id.weapon_ammos[W_MELEE_ID]));
+// draw the weapons to indicate currently selected weapon
+for(i = 0; i &lt; array_length_1d(player_inst_ids[1].weapon_ammos); i++) {
+    if (player_inst_ids[1].weapon_held == i) {
+        color = c_white;
+    }
+    else {
+        color = c_black;
+    }
+    draw_sprite_ext(weapon_sprites[i], -1, 490 + 20 * i, 444,
+        0.75, 0.75, 0, color, 1);
 }
-if (player2_inst_id.weapon_ammos[W_AUTO_RIFLE_ID] &gt;= 0) {
-    draw_text(536,450,string(player2_inst_id.weapon_ammos[W_AUTO_RIFLE_ID]));
-}
-if (player2_inst_id.weapon_ammos[W_SHOTGUN_ID] &gt;= 0) {
-    draw_text(556,450,string(player2_inst_id.weapon_ammos[W_SHOTGUN_ID]));
-}
-if (player2_inst_id.weapon_ammos[W_ACID_GUN_ID] &gt;= 0) {
-    draw_text(578,450,string(player2_inst_id.weapon_ammos[W_ACID_GUN_ID]));
+
+// draw the ammo bars
+for (i = 0; i &lt; array_length_1d(player_inst_ids[0].weapon_ammos); i++) {
+    if (player_inst_ids[1].weapon_ammos[i] == 0) {
+        draw_sprite_ext(spr_menus_hud_no, -1, 490 + 20 * i, 444,
+            0.75, 0.75, 0, c_white, 1);
+    }
+    else if (player_inst_ids[1].weapon_ammos[i] &gt; 0) {
+        draw_set_color(c_black);
+        draw_rectangle(481 + 20 * i, 450, 496 + 20 * i, 455, false);
+        draw_set_color(c_white);
+        draw_rectangle(482 + 20 * i, 451, (482 + 20 * i) +
+            (13 * (player_inst_ids[1].weapon_ammos[i] / max_ammos[i])), 454, false);
+    }
 }
 </string>
           </argument>
