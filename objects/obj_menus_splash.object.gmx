@@ -85,7 +85,11 @@ draw_set_valign(fa_middle);
 draw_set_font(fnt_default);
 draw_set_color(c_white);
 
-draw_text(view_wview/2, 48, "Press start or enter to begin.");
+draw_set_font(fnt_title);
+draw_text(view_wview/2, 40, "WELCOME TO BATTLE ARENA");
+draw_set_font(fnt_default);
+draw_text(view_wview/2, 100, "Created by Woodrow Barlow, Raymond Woods and Alex Bartell");
+draw_text(view_wview/2, 400, "Press start or enter to begin.");
 </string>
           </argument>
         </arguments>

@@ -137,9 +137,12 @@ if(scr_pressed_start(0, false) || scr_pressed_primary(0, false) || scr_pressed_s
             <kind>1</kind>
             <string>draw_set_halign(fa_center);
 draw_set_valign(fa_center);
-draw_set_font(fnt_default);
 draw_set_color(c_white);
 
+draw_set_font(fnt_title);
+draw_text(view_wview[0] / 2, 50, "Select the arena");
+
+draw_set_font(fnt_default);
 if(selected_stage &gt;= 0) draw_set_color(c_lime);
 draw_text(view_wview[0] / 4, view_hview[0] / 2, string(stage_names[stage_selection]));
 

@@ -146,8 +146,13 @@ if(selected_characters[0] &gt;= 0 &amp;&amp; selected_characters[1] &gt;= 0) {
             <kind>1</kind>
             <string>draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_set_font(fnt_default);
 draw_set_color(c_white);
+
+draw_set_font(fnt_title);
+
+draw_text(view_wview[0] / 2, 50, "Select your character");
+
+draw_set_font(fnt_default);
 
 if(selected_characters[0] &gt;= 0) draw_set_color(c_lime);
 draw_text(view_wview[0] / 4, view_hview[0] / 2, string(character_names[player_selection[0]]));
