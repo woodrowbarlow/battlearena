@@ -15,7 +15,6 @@
     </sounds>
     <sounds name="sound effects">
       <sound>sound\snd_death</sound>
-      <sound>sound\snd_dive</sound>
       <sound>sound\snd_hit</sound>
       <sound>sound\snd_ice1</sound>
       <sound>sound\snd_ice2</sound>
@@ -27,7 +26,6 @@
       <sound>sound\snd_shoot1</sound>
       <sound>sound\snd_shoot2</sound>
       <sound>sound\snd_shotgun</sound>
-      <sound>sound\snd_rhino</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
