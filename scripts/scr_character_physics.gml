@@ -83,17 +83,18 @@ if (abs(argument0.delta_x) > 0) {
 
 // if the character has pending knockback, process it
 if (argument0.knockback != 0) {
-    if (abs(argument0.knockback) <= G_GRID_SIZE / 2) {
+    argument0.delta_y -= G_GRID_SIZE / 30;
+    if (abs(argument0.knockback) <= G_GRID_SIZE / 4) {
         argument0.delta_x += argument0.knockback;
         argument0.knockback = 0;
     }
     else if (argument0.knockback < 0) {
-        argument0.delta_x -= G_GRID_SIZE / 2;
-        argument0.knockback += G_GRID_SIZE / 2;
+        argument0.delta_x -= G_GRID_SIZE / 4;
+        argument0.knockback += G_GRID_SIZE / 4;
     }
     else {
-        argument0.delta_x += G_GRID_SIZE / 2;
-        argument0.knockback -= G_GRID_SIZE / 2;
+        argument0.delta_x += G_GRID_SIZE / 4;
+        argument0.knockback -= G_GRID_SIZE / 4;
     }
 }
 
