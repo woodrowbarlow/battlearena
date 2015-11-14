@@ -26,6 +26,11 @@
       <sound>sound\snd_shoot1</sound>
       <sound>sound\snd_shoot2</sound>
       <sound>sound\snd_shotgun</sound>
+      <sound>sound\snd_dive</sound>
+      <sound>sound\snd_rocket_explosion</sound>
+      <sound>sound\snd_rocket_shoot</sound>
+      <sound>sound\snd_ruff</sound>
+      <sound>sound\snd_teleport</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
