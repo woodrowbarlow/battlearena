@@ -173,7 +173,7 @@ for (i = 0; i < instance_number(obj_characters_parent); i++) {
     if (enemy.x >= min_x && enemy.x <= max_x &&
         enemy.y >= min_y && enemy.y <= max_y) {
         enemy.character_health -= (1 - other.damage_reduction) * damage;
-        enemy.knockback += sign(argument0.facing_direction) * G_GRID_SIZE * knockback;
+        enemy.knockback[0] += sign(argument0.facing_direction) * G_GRID_SIZE * knockback;
         audio_play_sound(snd_hit, 1, false);
         return 0;   // remove return if punches should go through multiple people
     }
