@@ -28,7 +28,8 @@ for (i = 0; i < number_of_players; i++) {
     inst_ids[i].weapon_timers[W_SHOTGUN_ID] = 0;
     inst_ids[i].weapon_timers[W_ACID_GUN_ID] = 0;
     inst_ids[i].weapon_timers[W_SEEKER_ROCKET_ID] = 0;
-    inst_ids[i].knockback = 0;
+    inst_ids[i].knockback[0] = 0;
+    inst_ids[i].knockback[1] = 0;
 }
 
 hud = instance_create(0, 0, obj_menus_hud);

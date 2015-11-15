@@ -54,7 +54,20 @@ instance_destroy();
 
 if (other.player_id != fired_by) {
     other.character_health -= (1 - other.damage_reduction) * damage;
-    other.knockback += sign(hspeed) * knockback * G_GRID_SIZE;
+    if (vspeed == 0) {
+        other.knockback[0] += (1 - other.knockback_reduction) *
+                sign(hspeed) * knockback * G_GRID_SIZE;
+    }
+    else if (hspeed == 0) {
+        other.knockback[1] += (1 - other.knockback_reduction) *
+                sign(vspeed) * knockback * G_GRID_SIZE;
+    }
+    else {
+        other.knockback[0] += (1 - other.knockback_reduction) *
+                sign(hspeed) * (hspeed / vspeed) * knockback * G_GRID_SIZE;
+        other.knockback[1] += (1 - other.knockback_reduction) *
+                sign(vspeed) * (vspeed / hspeed) * knockback * G_GRID_SIZE;
+    }
     instance_destroy();
 }
 </string>

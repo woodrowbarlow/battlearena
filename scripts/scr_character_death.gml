@@ -9,7 +9,8 @@ if (argument0.y >= 1.25 * view_hview[0] || argument0.character_health <= 0) {
         argument0.y = argument0.spawn_coords[1];
         argument0.delta_x = 0;
         argument0.delta_y = 0;
-        argument0.knockback = 0;
+        argument0.knockback[0] = 0;
+        argument0.knockback[1] = 0;
         argument0.weapon_ammos[W_MELEE_ID] = DEFAULT_STARTING_AMMO_MELEE;
         argument0.weapon_ammos[W_AUTO_RIFLE_ID] = DEFAULT_STARTING_AMMO_AUTO_RIFLE;
         argument0.weapon_ammos[W_SHOTGUN_ID] = DEFAULT_STARTING_AMMO_SHOTGUN;

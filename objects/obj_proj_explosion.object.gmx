@@ -75,13 +75,25 @@
             <kind>1</kind>
             <string>/// Hit a Character
 
-var dir = 1;
-if (other.x &lt; x) {
-    dir = -1;
-}
+var dx = other.x - x;
+var dy = other.y - y;
 
 other.character_health -= (1 - other.damage_reduction) * damage;
-other.knockback += dir * knockback * G_GRID_SIZE;
+
+if (dy == 0) {
+    other.knockback[0] += (1 - other.knockback_reduction) *
+            sign(dx) * knockback * G_GRID_SIZE;
+}
+else if (dx == 0) {
+    other.knockback[1] += (1 - other.knockback_reduction) *
+            sign(dy) * knockback * G_GRID_SIZE;
+}
+else {
+    other.knockback[0] += (1 - other.knockback_reduction) *
+            sign(dx) * (dx / dy) * knockback * G_GRID_SIZE;
+    other.knockback[1] += (1 - other.knockback_reduction) *
+            sign(dy) * (dy / dx) * knockback * G_GRID_SIZE;
+}
 </string>
           </argument>
         </arguments>

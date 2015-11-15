@@ -29,9 +29,10 @@
 
 // character stats
 character_id                        = CHARACTER_ID_PENN;
-jump_height                         = 1.2; // percent
-move_speed                          = 1.2; // percent
-damage_reduction                    = 0.1; // percent
+jump_height                         = 1.20; // percent
+move_speed                          = 1.20; // percent
+damage_reduction                    = 0.10; // percent
+knockback_reduction                 = 0.00; // percent
 special_cooldown                    = 5;    // seconds
 airjump_limit                       = 1;    // number
 airjump_height                      = 0.50; // percent
