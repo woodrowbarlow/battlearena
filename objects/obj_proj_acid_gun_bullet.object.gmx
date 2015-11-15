@@ -119,7 +119,6 @@ image_speed = 0.02;
 if (other.player_id != fired_by) {
     other.character_health -= (1 - other.damage_reduction) * damage;
     other.x += sign(hspeed) * knockback * G_GRID_SIZE;
-    
 }
 </string>
           </argument>

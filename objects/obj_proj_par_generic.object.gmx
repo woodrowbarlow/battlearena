@@ -68,6 +68,7 @@ if (other.player_id != fired_by) {
         other.knockback[1] += (1 - other.knockback_reduction) *
                 sign(vspeed) * (vspeed / hspeed) * knockback * G_GRID_SIZE;
     }
+    audio_play_sound(snd_hit, 1, false);
     instance_destroy();
 }
 </string>
