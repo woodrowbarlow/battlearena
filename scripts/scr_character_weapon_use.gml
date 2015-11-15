@@ -257,6 +257,7 @@ argument0.weapon_ammos[W_SEEKER_ROCKET_ID] --;
 var rocket = instance_create(argument0.x + sign(argument0.facing_direction) * 4,
     argument0.y - 8, obj_proj_seeker_rocket);
 rocket.fired_by = argument0.player_id;
+audio_play_sound(snd_rocket_shoot, 1, false);
 
 #define scr_perform_special_sallie
 var dx = argument0.teleport_distance * G_GRID_SIZE
@@ -281,6 +282,8 @@ if (!scr_pressed_left(argument0.player_id, true)
 argument0.x += dx;
 argument0.y -= dy;
 
+audio_play_sound(snd_teleport, 1, false);
+
 #define scr_perform_special_ruff
 var enemy;
 
@@ -295,12 +298,20 @@ for (i = 0; i < instance_number(obj_characters_parent); i++) {
     }
 }
 
+audio_play_sound(snd_ruff, 1, false);
+
 #define scr_perform_special_aerie
 show_debug_message("player " + string(argument0.player_id) +
     "performing aerie's special");
 show_debug_message("aerie's special not yet implemented");
 
+//Plays sound for special move
+audio_play_sound(snd_dive, 1, false);
+
 #define scr_perform_special_penn
 show_debug_message("player " + string(argument0.player_id) +
     "performing penn's special");
 show_debug_message("penn's special not yet implemented");
+
+//Plays sound for special move
+audio_play_sound(snd_ice3, 1, false);
