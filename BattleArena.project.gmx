@@ -397,6 +397,7 @@
       <object>objects\obj_menus_splash</object>
       <object>objects\obj_menus_characterselect</object>
       <object>objects\obj_menus_arenaselect</object>
+      <object>objects\obj_menus_arenaselect_old</object>
       <object>objects\obj_menus_options</object>
       <object>objects\obj_menus_hud</object>
       <object>objects\obj_menus_victory</object>
