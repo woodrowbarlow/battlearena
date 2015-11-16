@@ -1,4 +1,4 @@
-Awkward Battle Arena
+Battle Arena
 By Banana Hive (Woodrow Barlow, Raymond Woods, Alex Bartell)
 
 Awkward Battle Arena is a two-player fighting game featuring the Colour Crew. Each member of the
@@ -32,7 +32,7 @@ Jump   			-- Spacebar					A
 Attack 			-- Shift					Right Trigger
 Switch Weapons  -- Q and E					Right and Left Bumpers
 
-Fun Fact: You can hit F1 to go back to the character select screen at any time!
+Fun Fact: You can hit F12 to go back to the character select screen at any time!
 
 
 CREDIT AND LICENSES:
